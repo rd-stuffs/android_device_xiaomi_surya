@@ -1,2 +1,3 @@
 # Audio
 vendor.audio.offload.buffer.size.kb=256
+vendor.audio.feature.kpi_optimize.enable=false
