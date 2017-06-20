@@ -21,6 +21,9 @@ on early-init
     write /sys/block/sda/queue/iosched/group_idle 0
     write /sys/block/sda/queue/iosched/slice_idle 0
 
+    # Disable vblank IRQ immediately after turning off
+    write /sys/module/drm/parameters/vblankoffdelay -1
+
 on late-init
     # Start services early for bootanim
     start surfaceflinger
