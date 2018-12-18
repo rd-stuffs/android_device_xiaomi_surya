@@ -152,6 +152,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "ForegroundCpuset",
+      "Path": "/dev/cpuset/foreground/cpus",
+      "Values": [
+        "0-7",
+        "0-5"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -278,6 +288,12 @@
       "Node": "L3BigClusterMinFreq",
       "Duration": 3000,
       "Value": "1459200000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "ForegroundCpuset",
+      "Duration": 3000,
+      "Value": "0-5"
     },
     {
       "PowerHint": "Flipendo",
