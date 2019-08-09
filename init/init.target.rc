@@ -34,6 +34,9 @@ on early-init
     write /proc/sys/kernel/sched_boost 1
 
 on init
+    # Disable powersaving
+    write /sys/module/lpm_levels/parameters/sleep_disabled 1
+
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
     write /dev/stune/top-app/schedtune.sched_boost_no_override 1
     write /dev/stune/schedtune.colocate 0
@@ -145,6 +148,9 @@ on charger
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu6/online 0
     write /sys/devices/system/cpu/cpu7/online 0
+
+    # Turn on sleep modes
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
