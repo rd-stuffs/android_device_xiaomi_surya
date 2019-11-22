@@ -153,4 +153,7 @@
     <!-- Haptic Level Settings -->
     <string name="haptic_level_title">Haptic feedback level</string>
     <string name="haptic_level_summary_incompatible">Feature not supported</string>
+
+    <!-- FPS Counter -->
+    <string name="fps_info_title">FPS Counter</string>
 </resources>
