@@ -2,6 +2,9 @@
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 persist.vendor.audio.voicecall.speaker.stereo=true
 
+# APK Verity
+ro.apk_verity.mode=2
+
 # Bluetooth
 persist.vendor.bluetooth.modem_nv_support=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac
