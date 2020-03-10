@@ -186,6 +186,11 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += fstab.qcom
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
+PRODUCT_PACKAGES += \
+    e2fsck_ramdisk \
+    tune2fs_ramdisk \
+    resize2fs_ramdisk
+
 PRODUCT_SYSTEM_PROPERTIES += \
     fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
