@@ -116,6 +116,9 @@ on charger
     chown system system /sys/class/leds/white/brightness
     write /sys/class/leds/white/brightness 255
 
+on property:sys.camera.miui.apk=*
+    setprop vendor.camera.miui.apk ${sys.camera.miui.apk}
+
 on property:vendor.camera.watermark.en=1
     chmod 666 /mnt/vendor/persist/camera/karna_main_space_custom_watermark.png
     chmod 666 /mnt/vendor/persist/camera/karna_main_space_cinematic_ratio_custom_watermark.png
