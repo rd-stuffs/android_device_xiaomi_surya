@@ -21,6 +21,7 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,org.lineageos.snap,com.andr
 
 # Display
 debug.sf.disable_backpressure=1
+debug.sf.disable_client_composition_cache=1
 debug.sf.enable_hwc_vds=1
 debug.sf.frame_rate_multiple_threshold=120
 debug.sf.latch_unsignaled=1
