@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/device_settings_title">
+
+    <PreferenceCategory
+        android:key="audio"
+        android:title="@string/audio_title">
+
+        <Preference
+            android:key="clear_speaker_settings"
+            android:title="@string/clear_speaker_title"
+            android:summary="@string/clear_speaker_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.speaker.ClearSpeakerActivity"
+                android:targetPackage="org.lineageos.settings" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="display"
+        android:title="@string/display_title">
+
+        <Preference
+            android:key="doze_settings"
+            android:title="@string/ambient_display_title"
+            android:summary="@string/ambient_display_gestures_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.doze.DozeSettingsActivity"
+                android:targetPackage="org.lineageos.settings" />
+        </Preference>
+
+        <Preference
+            android:key="lcd_features_settings"
+            android:title="@string/lcd_features_title"
+            android:summary="@string/lcd_features_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.display.LcdFeaturesPreferenceActivity"
+                android:targetPackage="org.lineageos.settings" />
+        </Preference>
+
+        <Preference
+            android:key="refresh_settings"
+            android:title="@string/refresh_title"
+            android:summary="@string/refresh_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.refreshrate.RefreshActivity"
+                android:targetPackage="org.lineageos.settings" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="performance"
+        android:title="@string/performance_title">
+
+        <Preference
+            android:key="thermal_settings"
+            android:title="@string/thermal_title"
+            android:summary="@string/thermal_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.thermal.ThermalSettingsActivity"
+                android:targetPackage="org.lineageos.settings" />
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
