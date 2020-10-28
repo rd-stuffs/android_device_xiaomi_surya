@@ -11,3 +11,6 @@ persist.sys.fuse.passthrough.enable=true
 
 # VSync
 debug.cpurend.vsync=false
+
+# Zygote
+zygote.critical_window.minute=10
