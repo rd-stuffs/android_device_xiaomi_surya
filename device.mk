@@ -170,6 +170,9 @@ PRODUCT_ODM_PROPERTIES += \
     ro.surface_flinger.has_wide_color_display=false \
     ro.surface_flinger.has_HDR_display=false
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.input.video_enabled=false
+
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.dpmhalservice.enable=1
