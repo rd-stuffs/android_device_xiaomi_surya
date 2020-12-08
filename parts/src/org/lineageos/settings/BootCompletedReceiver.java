@@ -51,7 +51,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DiracUtils.onBootCompleted(context);
 
         // KCAL
-        KcalUtils.writeCurrentSettings(sharedPrefs);
+        if (KcalUtils.isKcalSupported())
+            KcalUtils.writeCurrentSettings(sharedPrefs);
 
         // Refresh Rate
         RefreshUtils.startService(context);
