@@ -14,3 +14,6 @@
 
 # Fastcharge
 /sys/class/power_supply/bms/fastcharge_mode                             u:object_r:vendor_sysfs_battery_supply:s0
+
+# USB
+/vendor/bin/init\.mi\.usb\.sh		u:object_r:vendor_qti_init_shell_exec:s0
