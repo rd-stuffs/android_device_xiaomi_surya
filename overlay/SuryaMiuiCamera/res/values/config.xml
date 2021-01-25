@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <item type="dimen" name="custom_watermark_letter_spacing">0.02</item>
+    <item type="dimen" name="custom_watermark_pandingY_scale">0.82</item>
+    <item type="dimen" name="custom_watermark_text_size_ratio">0.94</item>
+    <integer name="custom_watermark_startx">197</integer>
+    <integer name="custom_watermark_starty">106</integer>
+    <string name="device_ultra_pixel_watermark_default_text">64MP QUAD CAMERA</string>
+    <string name="device_watermark_default_text">AI QUAD CAMERA</string>
+
+</resources>

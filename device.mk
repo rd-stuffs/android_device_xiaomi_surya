@@ -340,6 +340,7 @@ PRODUCT_PACKAGES += \
     KarnaFrameworks \
     SuryaCarrierConfig \
     SuryaFrameworks \
+    SuryaMiuiCamera \
     SuryaSettings \
     SuryaSystemUI
 
