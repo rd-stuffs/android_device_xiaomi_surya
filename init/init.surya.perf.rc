@@ -74,11 +74,6 @@ on early-init
     write /sys/block/sde/queue/iostats 0
     write /sys/block/sdf/queue/iostats 0
 
-on boot
-    # GPU boost
-    chown system system /sys/class/kgsl/kgsl-3d0/min_pwrlevel
-    chmod 0660 /sys/class/kgsl/kgsl-3d0/min_pwrlevel
-
 on property:sys.boot_completed=1
     # Reset maximum I/O requests for runtime.
     write /sys/block/dm-0/queue/nr_requests 128

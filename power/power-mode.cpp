@@ -16,16 +16,15 @@
 
 #include <aidl/android/hardware/power/BnPower.h>
 #include <android-base/file.h>
-#include "power-common.h"
 
 #define BATTERY_SAVER_NODE "/sys/module/battery_saver/parameters/enabled"
-#define GPU_MIN_PWRLEVEL_NODE "/sys/class/kgsl/kgsl-3d0/min_pwrlevel"
 
 namespace aidl {
-namespace android {
+namespace google {
 namespace hardware {
 namespace power {
 namespace impl {
+namespace pixel {
 
 using ::aidl::android::hardware::power::Mode;
 using ::android::base::WriteStringToFile;
@@ -33,9 +32,6 @@ using ::android::base::WriteStringToFile;
 bool isDeviceSpecificModeSupported(Mode type, bool* _aidl_return) {
     switch (type) {
         case Mode::LOW_POWER:
-            *_aidl_return = true;
-            return true;
-        case Mode::EXPENSIVE_RENDERING:
             *_aidl_return = true;
             return true;
         default:
@@ -48,16 +44,14 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
         case Mode::LOW_POWER:
             WriteStringToFile(enabled ? "Y" : "N", BATTERY_SAVER_NODE, true);
             return true;
-        case Mode::EXPENSIVE_RENDERING:
-            WriteStringToFile(enabled ? "0" : "7", GPU_MIN_PWRLEVEL_NODE, true);
-            return true;
         default:
             return false;
     }
 }
 
+}  // namespace pixel
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace android
+}  // namespace google
 }  // namespace aidl
