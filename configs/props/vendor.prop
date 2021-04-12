@@ -69,9 +69,6 @@ debug.hwui.target_cpu_time_percent=30
 # Incremental FS
 ro.incremental.enable=1
 
-# IWLAN
-ro.telephony.iwlan_operation_mode=legacy
-
 # Keystore
 ro.hardware.keystore_desede=true
 
