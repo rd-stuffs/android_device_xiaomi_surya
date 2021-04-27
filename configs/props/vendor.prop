@@ -85,6 +85,9 @@ ro.vendor.lmk.force_inkernel_lmk=true
 # Netflix
 vendor.netflix.bsp_rev=Q6150-17263-1
 
+# QMI
+persist.vendor.qcomsysd.enabled=1
+
 # Radio
 persist.vendor.radio.add_power_save=1
 persist.vendor.radio.atfwd.start=true
