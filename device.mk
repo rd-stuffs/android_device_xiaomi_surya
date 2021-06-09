@@ -350,11 +350,15 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     KarnaFrameworks \
+    KarnaSettingsProvider \
+    KarnaWifi \
     SuryaCarrierConfig \
     SuryaFrameworks \
     SuryaMiuiCamera \
     SuryaSettings \
-    SuryaSystemUI
+    SuryaSettingsProvider \
+    SuryaSystemUI \
+    SuryaWifi
 
 # Overlays (AOSPA)
 PRODUCT_PACKAGES += \
