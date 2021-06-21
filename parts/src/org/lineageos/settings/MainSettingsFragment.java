@@ -12,6 +12,7 @@ import org.lineageos.settings.display.KcalSettingsActivity;
 import org.lineageos.settings.display.LcdFeaturesPreferenceActivity;
 import org.lineageos.settings.refreshrate.RefreshActivity;
 import org.lineageos.settings.thermal.ThermalSettingsActivity;
+import org.lineageos.settings.haptic.HapticLevelActivity;
 
 public class MainSettingsFragment extends PreferenceFragment {
 
@@ -21,6 +22,7 @@ public class MainSettingsFragment extends PreferenceFragment {
     private static final String PREF_LCD_FEATURES_SETTINGS = "lcd_features_settings";
     private static final String PREF_REFRESH_RATE_SETTINGS = "refresh_rate_settings";
     private static final String PREF_THERMAL_SETTINGS = "thermal_settings";
+    private static final String PREF_HAPTIC_SETTINGS = "haptic_settings";
 
     private Preference mDiracSettingsPref;
     private Preference mClearSpeakerSettingsPref;
@@ -28,6 +30,7 @@ public class MainSettingsFragment extends PreferenceFragment {
     private Preference mLcdFeaturesSettingsPref;
     private Preference mRefreshRateSettingsPref;
     private Preference mThermalSettingsPref;
+    private Preference mHapticSettingsPref;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -71,6 +74,13 @@ public class MainSettingsFragment extends PreferenceFragment {
         mThermalSettingsPref = (Preference) findPreference(PREF_THERMAL_SETTINGS);
         mThermalSettingsPref.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity().getApplicationContext(), ThermalSettingsActivity.class);
+            startActivity(intent);
+            return true;
+        });
+
+        mHapticSettingsPref = (Preference) findPreference(PREF_HAPTIC_SETTINGS);
+        mHapticSettingsPref.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), HapticLevelActivity.class);
             startActivity(intent);
             return true;
         });

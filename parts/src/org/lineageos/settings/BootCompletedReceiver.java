@@ -28,6 +28,7 @@ import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.display.KcalUtils;
+import org.lineageos.settings.haptic.HapticUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 
@@ -53,6 +54,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // KCAL
         if (KcalUtils.isKcalSupported())
             KcalUtils.writeCurrentSettings(sharedPrefs);
+
+        // Haptic
+        HapticUtils.restoreLevel(context);
 
         // Refresh Rate
         RefreshUtils.startService(context);
