@@ -32,6 +32,7 @@ debug.sf.disable_backpressure=1
 debug.sf.disable_client_composition_cache=1
 debug.sf.frame_rate_multiple_threshold=60
 debug.sf.latch_unsignaled=1
+debug.sf.layer_caching_active_layer_timeout_ms=1000
 debug.hwui.skia_atrace_enabled=false
 debug.renderengine.backend=skiaglthreaded
 ro.surface_flinger.protected_contents=true
