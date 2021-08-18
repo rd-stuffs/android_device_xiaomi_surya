@@ -182,8 +182,8 @@
       "Name": "PMQoSCpuDmaLatency",
       "Path": "/dev/cpu_dma_latency",
       "Values": [
-        "67",
-        "100"
+        "43",
+        "64"
       ],
       "HoldFd": true
     },
@@ -331,7 +331,7 @@
       "PowerHint": "LAUNCH",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 2500,
-      "Value": "67"
+      "Value": "43"
     },
     {
       "PowerHint": "LAUNCH",
