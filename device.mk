@@ -45,6 +45,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Device Settings
 PRODUCT_PACKAGES += \
