@@ -79,7 +79,8 @@ PRODUCT_PACKAGES += \
     init.game.rc \
     init.surya.perf.rc \
     init.surya.rc \
-    init.target.rc
+    init.target.rc \
+    init.qti.early_init.sh
 
 # IR
 PRODUCT_PACKAGES += \

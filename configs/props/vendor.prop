@@ -69,6 +69,3 @@ persist.vendor.radio.report_codec=1
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
-
-# SoC
-ro.soc.model=SM7150
