@@ -7,6 +7,10 @@ ro.vendor.audio.sdk.fluencetype=none
 vendor.audio.feature.kpi_optimize.enable=false
 vendor.audio.offload.buffer.size.kb=256
 
+# Display
+ro.surface_flinger.has_wide_color_display=false
+ro.surface_flinger.has_HDR_display=false
+
 # Volume
 ro.config.media_vol_default=8
 ro.config.media_vol_steps=25
