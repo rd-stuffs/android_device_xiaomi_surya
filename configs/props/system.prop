@@ -8,3 +8,6 @@ ro.charger.enable_suspend=true
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
+
+# VSync
+debug.cpurend.vsync=false
