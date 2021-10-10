@@ -40,6 +40,9 @@ TARGET_USES_YCRCB_CAMERA_ENCODE := true
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
+# Graphics
+TARGET_USES_VULKAN := true
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 
