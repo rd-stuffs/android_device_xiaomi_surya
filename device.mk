@@ -194,6 +194,7 @@ PRODUCT_PACKAGES += \
     KarnaFrameworks \
     NotchBarKiller \
     SuryaFrameworks \
+    SuryaSettings \
     SuryaSystemUI
 
 # ParanoidDoze
