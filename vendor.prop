@@ -19,6 +19,7 @@ camera.disable_zsl_mode=1
 # Display
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
+debug.sf.frame_rate_multiple_threshold=120
 debug.sf.latch_unsignaled=1
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
 ro.surface_flinger.protected_contents=true
