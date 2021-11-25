@@ -82,7 +82,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_VENDOR_PROPERTIES += \
-    camera.disable_zsl_mode=1
+    camera.disable_zsl_mode=1 \
+    persist.vendor.camera.perflock.enable=0
 
 # ContextHub
 PRODUCT_PACKAGES += \
