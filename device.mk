@@ -83,6 +83,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.has_wide_color_display=false
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
