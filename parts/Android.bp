@@ -9,7 +9,7 @@ android_app {
     resource_dirs: ["res"],
     certificate: "platform",
     platform_apis: true,
-    product_specific: true,
+    system_ext_specific: true,
     privileged: true,
 
     required: [
@@ -26,5 +26,5 @@ prebuilt_etc {
     name: "privapp-permissions-parts.xml",
     src: "privapp-permissions-parts.xml",
     sub_dir: "permissions",
-    product_specific: true,
+    system_ext_specific: true,
 }
