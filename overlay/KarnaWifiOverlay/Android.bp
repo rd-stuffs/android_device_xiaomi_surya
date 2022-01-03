@@ -2,6 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 runtime_resource_overlay {
-    name: "AOSPASystemUIJ20C",
-    vendor: true
+    name: "KarnaWifiOverlay",
+    product_specific: true
 }

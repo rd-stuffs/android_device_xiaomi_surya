@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 runtime_resource_overlay {
-    aaptflags: ["--keep-raw-values"],
-    name: "J20CCarrierConfig",
-    product_specific: true
+    name: "J20CFrameworksOverlay",
+    vendor: true
 }

@@ -136,20 +136,20 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    J20CCarrierConfig \
-    J20CFrameworks \
-    J20CSettings \
-    J20CSystemUI \
-    J20CWiFi \
-    KarnaFrameworks \
-    KarnaWifi \
-    SuryaFrameworks \
-    SuryaWifi
+    J20CCarrierConfigOverlay \
+    J20CFrameworksOverlay \
+    J20CSettingsOverlay \
+    J20CSystemUIOverlay \
+    J20CWifiOverlay \
+    KarnaFrameworksOverlay \
+    KarnaWifiOverlay \
+    SuryaFrameworksOverlay \
+    SuryaWifiOverlay
 
 # Overlays (AOSPA)
 PRODUCT_PACKAGES += \
-    AOSPAFrameworksJ20C \
-    AOSPASystemUIJ20C
+    AOSPAFrameworksJ20COverlay \
+    AOSPASystemUIJ20COverlay
 
 # ParanoidDoze
 PRODUCT_PACKAGES += \
