@@ -276,6 +276,10 @@ PRODUCT_PACKAGES += \
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
+# WiFi
+PRODUCT_PACKAGES += \
+    libwpa_client
+
 # WiFi Display
 PRODUCT_PACKAGES += \
     libavservices_minijail \
