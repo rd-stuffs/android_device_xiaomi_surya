@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 
 import org.lineageos.settings.dirac.DiracUtils;
+import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -34,6 +35,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Dirac
         DiracUtils.onBootCompleted(context);
+
+        // Refresh Rate
+        RefreshUtils.startService(context);
 
         // Thermal Profiles
         ThermalUtils.startService(context);
