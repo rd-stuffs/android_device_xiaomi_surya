@@ -22,12 +22,16 @@ import android.content.Intent;
 import android.content.IntentFilter;
 
 import org.lineageos.settings.doze.DozeUtils;
+import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
+        // Refresh Rate
+        RefreshUtils.startService(context);
+
         // Thermal Profiles
         ThermalUtils.startService(context);
         
