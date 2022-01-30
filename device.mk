@@ -209,6 +209,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.cp.taper_term_mv=6500 \
     persist.vendor.cp.vbus_offset_mv=1040
 
+# HWUI
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.hwui.use_hint_manager=true \
+    debug.hwui.target_cpu_time_percent=30
+
 # IDC
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc)
