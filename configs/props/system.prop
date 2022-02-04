@@ -6,6 +6,10 @@ ro.config.vc_call_vol_steps=10
 # Charger
 ro.charger.enable_suspend=true
 
+# Dexopt
+pm.dexopt.first-boot=quicken
+pm.dexopt.bg-dexopt=everything
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
