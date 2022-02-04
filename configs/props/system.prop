@@ -6,6 +6,12 @@ ro.config.vc_call_vol_steps=10
 # Charger
 ro.charger.enable_suspend=true
 
+# Dalvik
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.image-dex2oat-threads=8
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-threads=8
+
 # Dexopt
 pm.dexopt.first-boot=quicken
 pm.dexopt.bg-dexopt=everything
