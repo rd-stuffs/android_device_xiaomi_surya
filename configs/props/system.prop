@@ -1,3 +1,7 @@
+# Dexopt
+pm.dexopt.first-boot=quicken
+pm.dexopt.bg-dexopt=everything
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
