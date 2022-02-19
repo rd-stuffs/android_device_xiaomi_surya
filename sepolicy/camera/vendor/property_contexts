@@ -1,1 +1,2 @@
-vendor.camera. u:object_r:vendor_camera_prop:s0
+ro.boot.camera.                        u:object_r:vendor_camera_prop:s0
+vendor.camera.                         u:object_r:vendor_camera_prop:s0
