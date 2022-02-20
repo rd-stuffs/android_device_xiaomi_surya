@@ -76,6 +76,9 @@ ro.telephony.iwlan_operation_mode=legacy
 # Keystore
 ro.hardware.keystore_desede=true
 
+# LMK
+ro.vendor.lmk.force_inkernel_lmk=true
+
 # Netflix
 vendor.netflix.bsp_rev=Q6150-17263-1
 
