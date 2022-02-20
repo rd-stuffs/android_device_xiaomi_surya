@@ -73,6 +73,9 @@ ro.incremental.enable=1
 # Keystore
 ro.hardware.keystore_desede=true
 
+# LMK
+ro.vendor.lmk.force_inkernel_lmk=true
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
