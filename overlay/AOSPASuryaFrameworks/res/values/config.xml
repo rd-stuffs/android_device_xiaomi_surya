@@ -50,4 +50,7 @@
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
 
+    <!-- Whether to show WiFi/Hotspot standard -->
+    <bool name="config_show_network_standard">true</bool>
+
 </resources>
