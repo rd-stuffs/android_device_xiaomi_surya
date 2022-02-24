@@ -235,6 +235,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     telephony \
     usb \
     vibrator \
+    wfd \
     wlan
 
 # Recovery
@@ -279,18 +280,3 @@ $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 # WiFi
 PRODUCT_PACKAGES += \
     libwpa_client
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libavservices_minijail \
-    libavservices_minijail.vendor \
-    libnl \
-    libwfdaac \
-    libwfdaac_vendor
-
-#PRODUCT_BOOT_JARS += \
-    WfdCommon
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
