@@ -1,2 +1,5 @@
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
+
+# Keyguard
+persist.wm.enable_remote_keyguard_animation=0
