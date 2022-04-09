@@ -16,8 +16,8 @@
 -->
 <resources>
 
-    <!-- Location of the fingerprint sensor (power button) -->
-    <item name="fingerprint_sensor_location_fraction_x" type="fraction">100%</item>
-    <item name="fingerprint_sensor_location_fraction_y" type="fraction">43%</item>
+    <!-- Fingerprint sensor -->
+    <dimen name="fingerprint_dot_radius">0dp</dimen>
+    <dimen name="fingerprint_pulse_radius">0dp</dimen>
 
 </resources>
