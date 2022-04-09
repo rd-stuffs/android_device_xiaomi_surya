@@ -1,4 +1,5 @@
 # Camera
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
 # FUSE passthrough
