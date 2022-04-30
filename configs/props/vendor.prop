@@ -23,6 +23,7 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 debug.sf.disable_backpressure=1
 debug.sf.frame_rate_multiple_threshold=120
 debug.sf.latch_unsignaled=1
+debug.renderengine.backend=skiaglthreaded
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_display_power_timer_ms=1000
 ro.surface_flinger.set_idle_timer_ms=500
