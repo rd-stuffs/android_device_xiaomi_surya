@@ -9,7 +9,6 @@ persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
 persist.vendor.qcom.bluetooth.scram.enabled=true
 persist.vendor.qcom.bluetooth.soc=cherokee
-persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=cherokee
 
@@ -67,7 +66,6 @@ persist.vendor.cp.vbus_offset_mv=1040
 ro.incremental.enable=1
 
 # IWLAN
-persist.vendor.data.iwlan.enable=true
 ro.telephony.iwlan_operation_mode=legacy
 
 # Keystore
@@ -77,8 +75,6 @@ ro.hardware.keystore_desede=true
 vendor.netflix.bsp_rev=Q6150-17263-1
 
 # Radio
-persist.vendor.radio.add_power_save=1
-persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.force_on_dc=true
 persist.vendor.radio.manual_nw_rej_ct=1
