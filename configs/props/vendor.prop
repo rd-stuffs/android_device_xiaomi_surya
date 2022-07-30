@@ -93,6 +93,9 @@ persist.vendor.sensors.enable.mag_filter=true
 ro.soc.manufacturer=QTI
 ro.soc.model=SM7150
 
+# Thermal
+vendor.sys.thermal.data.path=/data/vendor/thermal/
+
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
