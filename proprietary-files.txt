@@ -278,7 +278,7 @@ vendor/lib64/camera/components/com.qti.node.photosolid.so|da3408bbb4225f457d2398
 vendor/lib64/camera/components/com.qti.node.remosaic.so|4eda3f0ec10e4cfb82b4f29a9675dad13bd44724
 vendor/lib64/camera/components/com.qti.node.stich.so|3bd6e354c09c4d03deda1b55f692d1a836bd4949
 vendor/lib64/camera/components/com.qti.node.swregistration.so|4dade02307f62c4ef49e6331fa8f21a5c1271ab3
-vendor/lib64/camera/components/com.qti.node.watermark.so|635d89e26254378798b000c3023286ab59071865
+vendor/lib64/camera/components/com.qti.node.watermark.so|c57ee56ab0b5151bb08e5a88c720dd5b4eca70c0
 vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so|687c69d9ae670f0bbc9f507501550337f0624402
 vendor/lib64/camera/components/com.qti.stats.aec.so|b26276bd60404b5dc760ec112060cfd2fd0b8bc2
 vendor/lib64/camera/components/com.qti.stats.aecwrapper.so|7156f27b68f006f27251c5768837b7cbaff4b463
