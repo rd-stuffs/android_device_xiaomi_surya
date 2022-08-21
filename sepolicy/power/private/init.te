@@ -1,0 +1,2 @@
+# Power
+allow init property_type:file { append create getattr map open read relabelto rename setattr unlink write };
