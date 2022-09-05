@@ -276,6 +276,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
+# Kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)-kernel/Image.gz
+PRODUCT_COPY_FILES += $(TARGET_PREBUILT_KERNEL):kernel
+PRODUCT_VENDOR_KERNEL_HEADERS += $(LOCAL_PATH)-kernel/kernel-headers
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
@@ -338,6 +343,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    $(LOCAL_PATH)-kernel \
     bootable/deprecated-ota \
     hardware/xiaomi
 
