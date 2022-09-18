@@ -571,8 +571,6 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5f
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|0af387d416acf6d697b9edd4090e3a6941696970
 
 # Fingerprint - from V12.5.7.0.RJGMIXM
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service|637ad79cc3683b00f02586e159af7ff1617461be
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|d1c7c6ae380afe02b433acbe53ca7b25ab247430
 vendor/etc/permissions/com.fingerprints.extension.xml|de711d8827e1d321b22b60fd75a204e8928f9c6d
 vendor/framework/com.fingerprints.extension.jar|da85473758ee143fad4d824d1fb95d9ad6b297a9
 vendor/lib64/hw/fingerprint.fpc.default.so|6f9433bf6cd0aaefa4275a7c2c124c8468d49868

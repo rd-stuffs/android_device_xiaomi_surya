@@ -58,6 +58,8 @@ on post-fs-data
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
     mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/vendor/goodix 0777 system system
+    mkdir /data/vendor/fpc 0777 system system
 
     # Bind mount fastrpc_shell_3 for labelling
     mkdir /mnt/vendor/dsp 0770 root root
