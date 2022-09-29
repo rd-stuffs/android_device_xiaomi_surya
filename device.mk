@@ -139,6 +139,7 @@ PRODUCT_PACKAGES += \
     J20CFrameworks \
     J20CSettings \
     J20CSystemUI \
+    J20CWiFi \
     KarnaFrameworks \
     SuryaFrameworks
 
