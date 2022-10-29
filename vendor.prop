@@ -25,6 +25,7 @@ debug.sf.disable_client_composition_cache=1
 debug.sf.enable_hwc_vds=1
 debug.sf.frame_rate_multiple_threshold=120
 debug.sf.latch_unsignaled=1
+debug.hwui.skia_atrace_enabled=false
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_display_power_timer_ms=1000
