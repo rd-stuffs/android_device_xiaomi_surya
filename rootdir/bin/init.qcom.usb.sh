@@ -140,12 +140,7 @@ if [ -d /config/usb_gadget ]; then
 fi
 
 # update product
-marketname=`getprop ro.product.marketname`
-if [ "$marketname" != "" ]; then
-    setprop vendor.usb.product_string "$marketname"
-else
-    setprop vendor.usb.product_string "$(getprop ro.product.model)"
-fi
+setprop vendor.usb.product_string "$(getprop ro.product.model)"
 
 #
 # Initialize RNDIS Diag option. If unset, set it to 'none'.
