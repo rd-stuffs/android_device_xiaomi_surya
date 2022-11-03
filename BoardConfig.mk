@@ -69,9 +69,6 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.init_fatal_reboot_target=recovery
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Media
 TARGET_DISABLED_UBWC := true
 
