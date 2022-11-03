@@ -1,9 +1,0 @@
-# Camera
-persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
-
-# FUSE passthrough
-persist.sys.fuse.passthrough.enable=true
-
-# IORap
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true

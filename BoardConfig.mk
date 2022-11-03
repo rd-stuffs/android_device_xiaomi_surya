@@ -1,14 +1,10 @@
-#
-# Copyright (C) 2021 Paranoid Android
-#
+# Copyright (C) 2023 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
-#
 
 DEVICE_PATH := device/xiaomi/surya
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -33,19 +29,12 @@ TARGET_PROVIDES_AUDIO_EXTNS := true
 TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
 
-# Camera
-TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
-
-# DRM
-TARGET_ENABLE_MEDIADRM_64 := true
-
 # DT2W
 TARGET_TAP_TO_WAKE_NODE  := "/proc/tp_gesture"
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/hidl/device_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
-DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
 
 ODM_MANIFEST_SKUS += surya
 ODM_MANIFEST_SURYA_FILES := $(DEVICE_PATH)/configs/hidl/manifest-nfc.xml
@@ -55,19 +44,29 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_surya
 TARGET_RECOVERY_DEVICE_MODULES := libinit_surya
 
 # Kernel
+KERNEL_DEFCONFIG := vendor/surya-perf_defconfig
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x01000000
-
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 androidboot.usbcontroller=a600000.dwc3 earlycon=msm_geni_serial,0x880000 loop.max_part=7
-BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-BOARD_KERNEL_CMDLINE += kpti=off cgroup.memory=nokmem,nosocket
-
-KERNEL_DEFCONFIG := vendor/surya-perf_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version 2
+
+BOARD_KERNEL_CMDLINE += \
+    kpti=off \
+    swiotlb=1 \
+    loop.max_part=7 \
+    androidboot.memcg=1 \
+    msm_rtb.filter=0x237 \
+    console=ttyMSM0,115200n8 \
+    service_locator.enable=1 \
+    androidboot.hardware=qcom \
+    androidboot.console=ttyMSM0 \
+    lpm_levels.sleep_disabled=1 \
+    cgroup.memory=nokmem,nosocket \
+    earlycon=msm_geni_serial,0x880000 \
+    androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.init_fatal_reboot_target=recovery
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -86,7 +85,7 @@ BOARD_USES_METADATA_PARTITION := true
 BOARD_SUPER_PARTITION_SIZE := 8589934592
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 8585740288 # (BOARD_SUPER_PARTITION_SIZE - 4MB overhead)
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 8585740288
 
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 104857600
 BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 104857600
@@ -107,8 +106,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -117,7 +117,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_xiaomi
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Screen density

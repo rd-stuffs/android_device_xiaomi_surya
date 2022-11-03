@@ -1,12 +1,5 @@
-#
-# Copyright (C) 2021 Paranoid Android
-#
+# Copyright (C) 2023 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
-#
-
-# ANT+
-PRODUCT_PACKAGES += \
-    com.dsi.ant@1.0.vendor
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -17,15 +10,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_wcd9375.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9375.xml
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1.vendor \
-    android.hardware.bluetooth.audio@2.1-impl \
-    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
-
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
@@ -33,18 +17,11 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64 \
     vendor.qti.hardware.camera.device@1.0.vendor
 
-PRODUCT_PACKAGES += \
-    GcamGo
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
-
-# Charger
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.charger.enable_suspend=true
 
 # ContextHub
 PRODUCT_PACKAGES += \
@@ -60,27 +37,12 @@ PRODUCT_PACKAGES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Device Settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.xiaomiparts.rc \
-    $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-parts.xml
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.lcd.hbm_mode=0 \
-    persist.lcd.cabc_mode=1
-
 # Display
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/display/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_PACKAGES += \
     disable_configstore
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.has_wide_color_display=false
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -101,9 +63,6 @@ BOARD_HAVE_QCOM_FM := true
 
 # GPS
 LOC_HIDL_VERSION := 4.0
-
-# GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Health
 PRODUCT_PACKAGES += \
@@ -130,10 +89,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh \
     $(LOCAL_PATH)/rootdir/bin/init.qti.dcvs.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.dcvs.sh
 
-# Input
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/input/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
@@ -153,10 +108,6 @@ PRODUCT_COPY_FILES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Netmgr
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
 
 # NeuralNetworks
 PRODUCT_PACKAGES += \
@@ -185,14 +136,11 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPASuryaFrameworks \
-    AOSPASuryaSettings \
-    AOSPASuryaSystemUI \
+    J20CFrameworks \
+    J20CSettings \
+    J20CSystemUI \
     KarnaFrameworks \
-    NotchBarKiller \
-    SuryaFrameworks \
-    SuryaSettings \
-    SuryaSystemUI
+    SuryaFrameworks
 
 # ParanoidDoze
 PRODUCT_PACKAGES += \
@@ -234,21 +182,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wfd \
     wlan
 
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_xiaomi
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
@@ -273,6 +206,5 @@ PRODUCT_PACKAGES += \
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
-# WiFi
-PRODUCT_PACKAGES += \
-    libwpa_client
+# Device-specific settings
+$(call inherit-product, device/xiaomi/surya/parts/parts.mk)
