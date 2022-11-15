@@ -43,6 +43,7 @@
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="001" mnc="01">
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
@@ -1398,15 +1399,12 @@
         <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
         <boolean name="allow_one_way_accept_video_call" value="false" />
         <boolean name="carrier_call_composer_supported_bool" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="160">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="200">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="210">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
@@ -1417,27 +1415,21 @@
         <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
         <boolean name="allow_one_way_accept_video_call" value="false" />
         <boolean name="carrier_call_composer_supported_bool" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="220">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="230">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="240">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="250">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="270">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="300">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
@@ -1451,11 +1443,9 @@
         <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
         <boolean name="allow_one_way_accept_video_call" value="false" />
         <boolean name="carrier_call_composer_supported_bool" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="490">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="530">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
@@ -1471,11 +1461,9 @@
     </carrier_config>
     <carrier_config mcc="310" mnc="660">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="310" mnc="800">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="311" mnc="00">
         <boolean name="rtt_supported_bool" value="true" />
