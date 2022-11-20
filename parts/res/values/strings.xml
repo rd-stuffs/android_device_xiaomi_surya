@@ -83,10 +83,9 @@
     <string name="thermal_title">Thermal profiles</string>
     <string name="thermal_summary">Per-app thermal and touchscreen profiles with game mode</string>
     <string name="thermal_default">Default</string>
-    <string name="thermal_benchmark">Benchmark</string>
+    <string name="thermal_performance">Performance</string>
     <string name="thermal_camera">Camera</string>
     <string name="thermal_dialer">Dialer</string>
-    <string name="thermal_gaming">Gaming</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Clear speaker</string>
