@@ -470,27 +470,8 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
-    <!-- Whether to intercept inputs on screen off -->
-    <bool name="config_enableKeyHandler">true</bool>
-
-    <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
-    <integer name="config_doubleTapKeyCode">143</integer>
-
-    <!-- Default settings for gestures:
-             0 - Disabled
-             1 - Wake
-             2 - Pulse
-             3 - Flashlight
-             4 - Airplane
-             5 - Play/Pause
-             6 - Next
-             7 - Previous
-             8 - Camera
-             9 - Dialer -->
-    <integer name="config_doubleTapDefault">1</integer>
-
-    <!-- Fingerprint from stock ROM -->
-    <string name="config_stockFingerprint" translatable="false">POCO/surya_eea/surya:12/RKQ1.211019.001/V13.0.3.0.SJGEUXM:user/release-keys</string>
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
 
     <!-- Should the pinner service pin the Camera application? -->
     <bool name="config_pinnerCameraApp">false</bool>
@@ -504,9 +485,18 @@
     <!-- If this is true, device supports Sustained Performance Mode. -->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
+    <!-- Whether safe headphone volume is enabled or not (country specific). -->
+    <bool name="config_safe_media_volume_enabled">false</bool>
+
     <!-- Safe headphone volume index. When music stream volume is below this index
     the SPL on headphone output is compliant to EN 60950 requirements for portable music
     players. -->
     <integer name="config_safe_media_volume_index">17</integer>
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
+
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
 
 </resources>

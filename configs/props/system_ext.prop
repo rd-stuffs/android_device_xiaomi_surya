@@ -1,2 +1,6 @@
 # LCD Features
 persist.lcd.cabc_mode=1
+
+# Maintainer
+ro.reloaded.device_maintainer=Richard
+ro.reloaded.device_maintainer_url=https://t.me/rdxzv
