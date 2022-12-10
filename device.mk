@@ -197,7 +197,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
-    media-legacy \
+    media \
     overlay \
     perf \
     telephony \
