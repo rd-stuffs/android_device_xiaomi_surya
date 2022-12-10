@@ -175,6 +175,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     FullscreenOverlay \
+    J20CApertureOverlay \
     J20CFrameworksOverlay \
     J20CSettingsOverlay \
     J20CSystemUIOverlay \
