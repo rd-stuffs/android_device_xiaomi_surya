@@ -5,5 +5,9 @@ pm.dexopt.bg-dexopt=everything
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
+# Gboard
+ro.com.google.ime.height_ratio=1.075
+ro.com.google.ime.kb_pad_port_b=8
+
 # Keyguard
 persist.wm.enable_remote_keyguard_animation=0
