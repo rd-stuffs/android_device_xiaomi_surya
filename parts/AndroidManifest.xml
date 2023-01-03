@@ -67,6 +67,22 @@
         </activity>
 
         <activity
+            android:name=".kprofiles.KProfilesSettingsActivity"
+            android:label="@string/kprofiles_title"
+            android:exported="false"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.battery" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/kprofiles_summary" />
+        </activity>
+
+        <activity
             android:name=".thermal.ThermalSettingsActivity"
             android:label="@string/thermal_title"
             android:exported="false"
@@ -143,6 +159,17 @@
             android:label="@string/lcd_cabc_tile_title"
             android:exported="true"
             android:icon="@drawable/ic_cabc"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".kprofiles.KProfilesModesTileService"
+            android:label="@string/kprofiles_modes_title"
+            android:exported="true"
+            android:icon="@drawable/ic_kprofiles"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>

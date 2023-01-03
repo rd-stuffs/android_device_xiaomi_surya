@@ -24,4 +24,7 @@
      <integer name="touch_resistant_default">2</integer>
      <integer name="touch_resistant_max">3</integer>
 
+     <!-- KProfiles default mode -->
+     <integer name="kprofiles_default">0</integer>
+
 </resources>
