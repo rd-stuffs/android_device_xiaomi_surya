@@ -53,10 +53,6 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
-# Device Settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Display
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/display/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -245,3 +241,6 @@ PRODUCT_COPY_FILES += \
 
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
+
+# Device-specific settings
+$(call inherit-product, device/xiaomi/surya/parts/parts.mk)

@@ -7,6 +7,7 @@
 android_app {
     name: "XiaomiParts",
 
+    init_rc: ["init/init.xiaomiparts.rc"],
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
     certificate: "platform",
@@ -15,7 +16,6 @@ android_app {
     privileged: true,
 
     required: [
-        "init.xiaomiparts.rc",
         "privapp-permissions-parts.xml",
     ],
 
@@ -27,13 +27,6 @@ android_app {
         proguard_flags_files: ["proguard.flags"],
     },
 
-}
-
-prebuilt_etc {
-    name: "init.xiaomiparts.rc",
-    src: "init.xiaomiparts.rc",
-    sub_dir: "init",
-    system_ext_specific: true,
 }
 
 prebuilt_etc {
