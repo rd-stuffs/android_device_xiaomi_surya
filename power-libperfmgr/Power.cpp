@@ -74,9 +74,9 @@ Power::Power()
     }
 }
 
-void endAllHints(std::shared_ptr<HintManager> mHintManager) {
-    for (std::string hint: mHintManager->GetHints()) {
-        mHintManager->EndHint(hint);
+void endAllHints() {
+    for (std::string hint: HintManager::GetInstance()->GetHints()) {
+        HintManager::GetInstance()->EndHint(hint);
     }
 }
 
@@ -89,19 +89,19 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     switch (type) {
         case Mode::SUSTAINED_PERFORMANCE:
             if (enabled) {
-            	endAllHints(mHintManager);
+            	endAllHints();
                 HintManager::GetInstance()->DoHint("SUSTAINED_PERFORMANCE");
             } else {
-                mHintManager->EndHint("SUSTAINED_PERFORMANCE");
+                HintManager::GetInstance()->EndHint("SUSTAINED_PERFORMANCE");
             }
             mSustainedPerfModeOn = enabled;
             break;
         case Mode::LOW_POWER:
             if (enabled) {
-                endAllHints(mHintManager);
-                mHintManager->DoHint("LOW_POWER");
+                endAllHints();
+                HintManager::GetInstance()->DoHint("LOW_POWER");
             } else {
-                mHintManager->EndHint("LOW_POWER");
+                HintManager::GetInstance()->EndHint("LOW_POWER");
             }
             mBatterySaverOn = enabled;
             break;
