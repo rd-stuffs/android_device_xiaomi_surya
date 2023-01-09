@@ -141,6 +141,26 @@
       "ResetOnInit": true
     },
     {
+      "Name": "CPUBWMinFreq",
+      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/min_freq",
+      "Values": [
+        "14236",
+        "9155",
+        "4577"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "LLCCBWMinFreq",
+      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/min_freq",
+      "Values": [
+        "6881",
+        "2597",
+        "762"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "L3LittleClusterMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/min_freq",
       "Values": [
@@ -228,6 +248,18 @@
     },
     {
       "PowerHint": "INTERACTION",
+      "Node": "CPUBWMinFreq",
+      "Duration": 0,
+      "Value": "9155"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "LLCCBWMinFreq",
+      "Duration": 0,
+      "Value": "2597"
+    },
+    {
+      "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
       "Value": "1324800"
@@ -282,6 +314,12 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "CPUBWMinFreq",
+      "Duration": 2500,
+      "Value": "14236"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "GPUForceClkOn",
       "Duration": 2500,
       "Value": "1"
@@ -303,6 +341,12 @@
       "Node": "LLCCBWGovernor",
       "Duration": 2500,
       "Value": "performance"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "LLCCBWMinFreq",
+      "Duration": 2500,
+      "Value": "6881"
     },
     {
       "PowerHint": "LAUNCH",
