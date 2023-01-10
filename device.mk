@@ -19,6 +19,9 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    Aperture
+
+PRODUCT_PACKAGES += \
     libpiex_shim
 
 PRODUCT_PACKAGES += \
@@ -172,6 +175,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    J20CApertureOverlay \
     J20CCarrierConfig \
     J20CFrameworks \
     J20CSettings \

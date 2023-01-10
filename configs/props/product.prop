@@ -1,2 +1,6 @@
 # Audio
 vendor.audio.offload.buffer.size.kb=256
+
+# Camera
+persist.vendor.camera.privapp.list=org.lineageos.aperture
+vendor.camera.aux.packagelist=org.lineageos.aperture
