@@ -42,7 +42,7 @@
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
-        <fqname>@4.0::IKeymasterDevice/default</fqname>
+        <fqname>@4.1::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -208,6 +208,11 @@
         <fqname>@2.0::IIop/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.mwqemadapter</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IMwqemAdapter/MwqemAdapter</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
         <transport>hwbinder</transport>
         <fqname>@2.2::IPerf/default</fqname>
@@ -248,8 +253,8 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::IUimLpa/UimLpa0</fqname>
-        <fqname>@1.0::IUimLpa/UimLpa1</fqname>
+        <fqname>@1.2::IUimLpa/UimLpa0</fqname>
+        <fqname>@1.2::IUimLpa/UimLpa1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
@@ -266,8 +271,8 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
-        <fqname>@2.6::IQtiRadio/slot1</fqname>
-        <fqname>@2.6::IQtiRadio/slot2</fqname>
+        <fqname>@2.7::IQtiRadio/slot1</fqname>
+        <fqname>@2.7::IQtiRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
