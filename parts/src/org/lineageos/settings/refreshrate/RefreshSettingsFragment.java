@@ -224,12 +224,12 @@ public class RefreshSettingsFragment extends PreferenceFragment
     private class ModeAdapter extends BaseAdapter {
 
         private final LayoutInflater inflater;
-        private final int[] items = {
-                R.string.refresh_default,
-                R.string.refresh_low,
-                R.string.refresh_standard,
-                R.string.refresh_high,
-                R.string.refresh_maximum
+        private final String[] items = {
+                getResources().getString(R.string.refresh_default),
+                "30 Hz",
+                "60 Hz",
+                "90 Hz",
+                "120 Hz"
         };
 
         private ModeAdapter(Context context) {
