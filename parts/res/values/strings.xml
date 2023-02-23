@@ -48,7 +48,7 @@
     <string name="touch_resistant_summary">Reduce touch sensitivity near the edges to avoid triggering touch controls</string>
 
     <!-- Refresh Rate  -->
-    <string name="refresh_title">App Refresh Rate</string>
+    <string name="refresh_title">Per-app refresh rate</string>
     <string name="refresh_summary">Adjust per-app maximum refresh rate</string>
     <string name="refresh_default">Default</string>
     <string name="refresh_low">Low (30Hz)</string>
