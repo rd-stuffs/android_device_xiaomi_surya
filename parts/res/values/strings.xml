@@ -122,5 +122,5 @@
     <string name="refresh_low">Low (30Hz)</string>
     <string name="refresh_standard">Standard (60Hz)</string>
     <string name="refresh_high">High (90Hz)</string>
-    <string name="refresh_extreme">Extreme (120Hz)</string>
+    <string name="refresh_maximum">Maximum (120Hz)</string>
 </resources>
