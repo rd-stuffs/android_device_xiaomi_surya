@@ -12,6 +12,7 @@
      limitations under the License.
 -->
 <resources>
+
     <!-- Values for Dirac headset pref -->
     <string-array name="dirac_headset_pref_entries" translatable="false">
         <item>@string/dirac_headset_earbuds</item>
@@ -40,7 +41,6 @@
         <item>@string/dirac_headset_redmi_earphones</item>
         <item>@string/dirac_headset_dual_driver_in_ear</item>
     </string-array>
-
     <string-array name="dirac_headset_pref_values" translatable="false">
         <item>0</item>
         <item>1</item>
@@ -90,7 +90,6 @@
         <item>@string/dirac_preset_soft_bass</item>
         <item>@string/dirac_preset_soft_treble</item>
     </string-array>
-
     <string-array name="dirac_preset_pref_values" translatable="false">
         <item>"0,0,0,0,0,0,0"</item>
         <item>"4,2,-2,0,-2,-2,4"</item>
@@ -126,30 +125,30 @@
         <item>3</item>
     </string-array>
 
+    <!-- Values for LCD HBM pref -->
     <string-array name="lcd_hbm_modes" translatable="false">
         <item>@string/disabled</item>
         <item>@string/lcd_hbm_medium</item>
         <item>@string/lcd_hbm_high</item>
     </string-array>
-    
     <string-array name="lcd_hbm_values" translatable="false">
         <item>"0"</item>
         <item>"1"</item>
         <item>"2"</item>
     </string-array>
-    
+
+    <!-- Values for LCD CABC pref -->
     <string-array name="lcd_cabc_modes" translatable="false">
         <item>@string/disabled</item>
         <item>@string/lcd_cabc_low</item>
         <item>@string/lcd_cabc_medium</item>
         <item>@string/lcd_cabc_high</item>
     </string-array>
-    
     <string-array name="lcd_cabc_values" translatable="false">
         <item>"0"</item>
         <item>"1"</item>
         <item>"3"</item>
         <item>"2"</item>
     </string-array>
-    
+
 </resources>
