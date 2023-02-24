@@ -127,9 +127,9 @@
     </string-array>
 
     <string-array name="lcd_hbm_modes" translatable="false">
-        <item>"Off"</item>
-        <item>"Medium"</item>
-        <item>"High"</item>
+        <item>@string/disabled</item>
+        <item>@string/lcd_hbm_medium</item>
+        <item>@string/lcd_hbm_high</item>
     </string-array>
     
     <string-array name="lcd_hbm_values" translatable="false">
@@ -139,10 +139,10 @@
     </string-array>
     
     <string-array name="lcd_cabc_modes" translatable="false">
-        <item>"Off"</item>
-        <item>"Low (UI)"</item>
-        <item>"Medium (Videos)"</item>
-        <item>"High (Images)"</item>
+        <item>@string/disabled</item>
+        <item>@string/lcd_cabc_low</item>
+        <item>@string/lcd_cabc_medium</item>
+        <item>@string/lcd_cabc_high</item>
     </string-array>
     
     <string-array name="lcd_cabc_values" translatable="false">
