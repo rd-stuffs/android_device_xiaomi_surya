@@ -74,6 +74,9 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.init_fatal_reboot_target=recovery
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 # Media
 TARGET_DISABLED_UBWC := true
 

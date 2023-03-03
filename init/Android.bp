@@ -61,6 +61,13 @@ prebuilt_etc {
     vendor: true
 }
 
+prebuilt_etc {
+    name: "ueventd.surya.rc",
+    src: "ueventd.rc",
+    filename_from_src: true,
+    device_specific: true
+}
+
 sh_binary {
     name: "init.mi.usb.sh",
     src: "init.mi.usb.sh",

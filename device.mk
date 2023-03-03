@@ -254,6 +254,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # LMK
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.lmk.force_inkernel_lmk=true
@@ -417,6 +421,10 @@ PRODUCT_COPY_FILES += \
 # Thermal
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
+
+# Uevent
+PRODUCT_PACKAGES += \
+    ueventd.surya.rc
 
 # Userspace fastboot
 PRODUCT_PACKAGES += \
