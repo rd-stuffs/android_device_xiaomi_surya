@@ -142,6 +142,11 @@ PRODUCT_PACKAGES += \
     KarnaFrameworks \
     SuryaFrameworks
 
+# Overlays (AOSPA)
+PRODUCT_PACKAGES += \
+    AOSPAFrameworksJ20C \
+    AOSPASystemUIJ20C
+
 # ParanoidDoze
 PRODUCT_PACKAGES += \
     ParanoidDoze
