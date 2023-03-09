@@ -220,7 +220,7 @@
       "Path": "/dev/cpuset/foreground/cpus",
       "Values": [
         "0-5",
-        "0-7"
+        "0-6"
       ],
       "ResetOnInit": true
     },
