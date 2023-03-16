@@ -571,11 +571,6 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|cd6771f2b03fbdd9835102eec8e7
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|e1034aede67671b58091dc987d789f3bbbe26ed4
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f2e143c684cd9f31372df63b44c163744b2ca0b7
 
-# Gatekeeper - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|14819df15693c737fb2a51bf89fe826200286006
-
 # Graphics firmware - from V14.0.1.0.SJGMIXM
 vendor/firmware/a615_zap.b00|1f966d9754aa6b971d39f5b3d9637480e67aa3fe
 vendor/firmware/a615_zap.b01|f37fbf6cbaf577c6d09e55d13d4f95f50d457cfd
@@ -652,16 +647,6 @@ vendor/firmware/ipa_fws.mdt|3cf0e17787b1b56a6252a3eda7675cf5e75ad0f2
 
 # IR - from V14.0.1.0.SJGMIXM
 vendor/lib64/hw/consumerir.default.so|bb96104803e2468d7982e6955dad14e6bd739939
-
-# Keymaster - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|f2dfed2111ada63ddc5283e12b6cb051bd9f9736
-vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|9816f37e7487295e29a19d05c4a3e6b7b0ec35ea
-vendor/lib64/libkeymasterdeviceutils.so|ae35058e3a887c0434d8d90470c2b33a2b8ddc1a
-vendor/lib64/libkeymasterprovision.so|20f964d6c902e003e826272f6227d23523056d1e
-vendor/lib64/libkeymasterutils.so|2392abef423c0610d9625670f1ff3063532e9bc1
-vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
-vendor/lib64/libqtikeymaster4.so|f02887e22f3cec87c2df4f78142923f0ded909e3
-vendor/lib64/libspcom.so|7cc4390e7caf520586c22cdb7219842fa5d6ed2c
 
 # Media - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/vppservice|99524e6e27bf4f8c4b5c5234f887413623cfdb0f
