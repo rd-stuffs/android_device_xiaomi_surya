@@ -140,31 +140,29 @@ public final class RefreshUtils {
 
             if (modes[0].contains(packageName + ",")) {
                 maxrate = REFRESH_STATE_LOW;
-                if ( minrate > maxrate){
+                if (minrate > maxrate) {
                 minrate = maxrate;
                 }
                 isAppInList = true;
-            } else if (modes[1].contains(packageName + ",")) {
+                } else if (modes[1].contains(packageName + ",")) {
                 maxrate = REFRESH_STATE_STANDARD;
-                if ( minrate > maxrate){
+                if (minrate > maxrate) {
                 minrate = maxrate;
                 }
-		isAppInList = true;
-            } else if (modes[2].contains(packageName + ",")) {
+                isAppInList = true;
+                } else if (modes[2].contains(packageName + ",")) {
                 maxrate = REFRESH_STATE_HIGH;
-                if ( minrate > maxrate){
+                if (minrate > maxrate) {
                 minrate = maxrate;
                 }
-		isAppInList = true;
-           } else if (modes[3].contains(packageName + ",")) {
+                isAppInList = true;
+                } else if (modes[3].contains(packageName + ",")) {
                 maxrate = REFRESH_STATE_MAXIMUM;
-                if ( minrate > maxrate){
                 minrate = maxrate;
+                isAppInList = true;
                 }
-		isAppInList = true;
-           }
-          }
-	Settings.System.putFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, minrate);
-        Settings.System.putFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, maxrate);
+            }
+            Settings.System.putFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, minrate);
+            Settings.System.putFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, maxrate);
     }
 }
