@@ -19,7 +19,8 @@
     <application
         android:allowBackup="true"
         android:label="@string/device_settings_app_name"
-        android:persistent="true">
+        android:persistent="true"
+        android:theme="@style/Theme.SubSettingsBase">
 
         <receiver android:name=".BootCompletedReceiver"
                   android:exported="false">
@@ -32,8 +33,7 @@
         <activity
             android:name=".display.LcdFeaturesPreferenceActivity"
             android:label="@string/lcd_features_title"
-            android:exported="false"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -48,8 +48,7 @@
         <activity
             android:name=".dirac.DiracActivity"
             android:label="@string/dirac_title"
-            android:exported="false"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -63,8 +62,7 @@
             android:name=".thermal.ThermalSettingsActivity"
             android:label="@string/thermal_title"
             android:icon="@drawable/ic_thermal_settings"
-            android:exported="false"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -87,8 +85,7 @@
         <activity
             android:name=".speaker.ClearSpeakerActivity"
             android:label="@string/clear_speaker_title"
-            android:exported="false"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -109,8 +106,7 @@
         <activity
             android:name=".refreshrate.RefreshActivity"
             android:label="@string/refresh_title"
-            android:exported="false"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
