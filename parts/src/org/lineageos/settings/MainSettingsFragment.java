@@ -28,7 +28,7 @@ public class MainSettingsFragment extends PreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.device_settings);
+        addPreferencesFromResource(R.xml.xiaomiparts);
 
         mDiracSettingsPref = (Preference) findPreference(PREF_DIRAC_SETTINGS);
         mDiracSettingsPref.setOnPreferenceClickListener(preference -> {
