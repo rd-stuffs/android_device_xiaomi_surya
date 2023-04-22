@@ -410,6 +410,27 @@ vendor/lib64/camera/fdconfigpreviewlite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b
 vendor/lib64/camera/fdconfigvideo.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
 vendor/lib64/camera/fdconfigvideolite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
 
+# Camera prebuilt interfaces - from V14.0.1.0.SJGMIXM
+vendor/bin/hw/android.hardware.camera.provider@2.4-service_64|a3e29b90c035c726ba94dacedc0dd3df8dd927e6
+vendor/lib/android.hardware.camera.provider@2.4-external.so|f462728f7686cbdeaf465bd43155d227eb22b980
+vendor/lib/android.hardware.camera.provider@2.4-legacy.so|2965063ed9dce8748ba38c14f284575099e9cbfd
+vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so|b473f182647190e565276982c06634932c6d5011
+vendor/lib/vendor.qti.hardware.camera.device@1.0.so|1f7f3d82623c638a3144ddffa209d53f86768b6c
+vendor/lib/vendor.qti.hardware.camera.device@3.5.so|c5d859f6ffbdab3bad417f9cb32dbf75d8cb7d0d
+vendor/lib64/android.hardware.camera.provider@2.4-external.so|4f69ea6a9e807d3c3564a64c1764e28d9c40bff9
+vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|4e311e433ed442a2ccfbd69310271df88a284c98
+vendor/lib64/camera.device@1.0-impl.so|e7d5479c601b3580f8f61c954b31cbfd7cee68c2
+vendor/lib64/camera.device@3.2-impl.so|7cecdd22e7d24f3fec44d1370e25c86a86556f5b
+vendor/lib64/camera.device@3.3-impl.so|90c6be3342d156b941e9f20b0006a61e30dd5af7
+vendor/lib64/camera.device@3.4-external-impl.so|9869bde6a9008a5c43da923cef7712c8f241cc34
+vendor/lib64/camera.device@3.4-impl.so|8312402ad1936c9356df3a41286b3ce3aa863660
+vendor/lib64/camera.device@3.5-external-impl.so|b3a6500ca3f257c7d8108c455c5238060a6f0817
+vendor/lib64/camera.device@3.5-impl.so|313661aa7a7efeaae6feb7a931390d3bc6b89f65
+vendor/lib64/camera.device@3.6-external-impl.so|4e6a2424a2da36d427d15566c434ad895692f081
+vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so|c7b14b561b132193ae00008a4d275700e43d0fc9
+vendor/lib64/vendor.qti.hardware.camera.device@1.0.so|67cfc6d7e4ac53908ffb09d13184bb79ff34894f
+vendor/lib64/vendor.qti.hardware.camera.device@3.5.so|f5f41758fc143d2d6e98222a436da456d86a1eed
+
 # CDSP - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/cdsprpcd|530bcfcf9a31dedcc6c8ff5ea33fbaf8c03ab877
 vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
