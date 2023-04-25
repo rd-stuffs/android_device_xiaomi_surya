@@ -1,1 +1,0 @@
-cmd_usr/techpack/audio/include/linux/mfd/.install := /bin/bash ../scripts/headers_install.sh ./usr/techpack/audio/include/linux/mfd ../techpack/audio/include/uapi/linux/mfd ; /bin/bash ../scripts/headers_install.sh ./usr/techpack/audio/include/linux/mfd ./techpack/audio/include/generated/uapi/linux/mfd ; touch usr/techpack/audio/include/linux/mfd/.install

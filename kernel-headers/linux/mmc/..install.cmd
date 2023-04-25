@@ -1,1 +1,0 @@
-cmd_usr/include/linux/mmc/.install := /bin/bash ../scripts/headers_install.sh ./usr/include/linux/mmc ../include/uapi/linux/mmc core.h mmc.h ioctl.h; /bin/bash ../scripts/headers_install.sh ./usr/include/linux/mmc ./include/generated/uapi/linux/mmc ; touch usr/include/linux/mmc/.install
