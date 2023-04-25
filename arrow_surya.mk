@@ -14,24 +14,18 @@
 # limitations under the License.
 #
 
-# Inherit framework first
+# Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from surya device
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
-ifneq ($(VANILLA_BUILD),true)
-# Inherit GMS
-$(call inherit-product, vendor/partner_gms/products/gms.mk)
-$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
-$(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules_t_flatten_apex.mk)
-else
-$(warning Building vanilla)
-endif
+# Inherit some common ArrowOS stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Device identifier
-PRODUCT_NAME := aosp_surya
+PRODUCT_NAME := arrow_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := M2007J20CG
@@ -40,3 +34,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=surya_global
+
+# ArrowOS additions
+TARGET_BOOT_ANIMATION_RES := 1080
+DEVICE_MAINTAINER := Richard
+ARROW_GAPPS := true
