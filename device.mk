@@ -231,6 +231,8 @@ TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 OVERRIDE_QCOM_HARDWARE_VARIANT := sm8150-common
 
 # Power
+TARGET_PROVIDES_POWERHAL := true
+
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr
 
