@@ -12,6 +12,10 @@ android_app {
     system_ext_specific: true,
     privileged: true,
 
+    static_libs: [
+        "SettingsLib"
+    ],
+
     required: [
         "privapp-permissions-parts.xml",
     ],
