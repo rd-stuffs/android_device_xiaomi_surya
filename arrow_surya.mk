@@ -32,7 +32,10 @@ PRODUCT_MODEL := M2007J20CG
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+BUILD_FINGERPRINT := "POCO/surya_global/surya:12/RKQ1.211019.001/V13.0.1.0.SJGMIXM:user/release-keys"
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="surya_global-user 12 RKQ1.211019.001 V13.0.1.0.SJGMIXM release-keys" \
     TARGET_PRODUCT=surya_global
 
 # ArrowOS additions
