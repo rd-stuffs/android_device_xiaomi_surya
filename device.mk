@@ -174,14 +174,6 @@ PRODUCT_PACKAGES += \
     AOSPAFrameworksJ20COverlay \
     AOSPASystemUIJ20COverlay
 
-# ParanoidDoze
-PRODUCT_PACKAGES += \
-    ParanoidDoze
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sensor.proximity=true \
-    ro.sensor.pickup=xiaomi.sensor.pickup
-
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
