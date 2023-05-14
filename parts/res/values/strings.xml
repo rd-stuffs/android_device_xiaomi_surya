@@ -110,6 +110,8 @@
     <string name="red_slider_title">Red</string>
     <string name="green_slider_title">Green</string>
     <string name="blue_slider_title">Blue</string>
+    <string name="hue_slider_title">Hue</string>
+    <string name="brightness_slider_title">Brightness</string>
     <string name="kcal_rgb_preference_category_title">RGB</string>
     <string name="kcal_calibration_preference_category_title">Color calibration</string>
     <string name="saturation_slider_title">Saturation</string>

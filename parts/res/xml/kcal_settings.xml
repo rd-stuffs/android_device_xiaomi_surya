@@ -79,6 +79,20 @@
             android:max="383"
             android:title="@string/contrast_slider_title" />
 
+        <SeekBarPreference
+            android:key="hue_slider"
+            android:defaultValue="0"
+            android:dependency="kcal_enable"
+            android:max="255"
+            android:title="@string/hue_slider_title" />
+
+        <SeekBarPreference
+            android:key="brightness_slider"
+            android:defaultValue="255"
+            android:dependency="kcal_enable"
+            android:max="383"
+            android:title="@string/brightness_slider_title" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

@@ -27,6 +27,8 @@ public final class KcalUtils {
     public static final String KCAL_RGB_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal";
     public static final String KCAL_SATURATION_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_sat";
     public static final String KCAL_CONTRAST_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_cont";
+    public static final String KCAL_HUE_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_hue";
+    public static final String KCAL_BRIGHTNESS_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_val";
 
     // Write the given value to the given position on the KCAL node
     // position 0 is the full node, so the function will write the value to the node without following a pattern
@@ -88,6 +90,8 @@ public final class KcalUtils {
         KcalUtils.writeConfigToNode(KcalUtils.KCAL_RGB_NODE, 3, sharedPrefs.getInt("blue_slider", 256));
         KcalUtils.writeConfigToNode(KcalUtils.KCAL_SATURATION_NODE, 0, sharedPrefs.getInt("saturation_slider", 255));
         KcalUtils.writeConfigToNode(KcalUtils.KCAL_CONTRAST_NODE, 0, sharedPrefs.getInt("contrast_slider", 255));
+        KcalUtils.writeConfigToNode(KcalUtils.KCAL_HUE_NODE, 0, sharedPrefs.getInt("hue_slider", 0));
+        KcalUtils.writeConfigToNode(KcalUtils.KCAL_BRIGHTNESS_NODE, 0, sharedPrefs.getInt("brightness_slider", 255));
     }
 
     public static boolean isKcalSupported() {

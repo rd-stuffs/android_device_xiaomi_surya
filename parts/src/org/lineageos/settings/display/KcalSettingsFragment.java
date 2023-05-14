@@ -48,6 +48,8 @@ public class KcalSettingsFragment extends PreferenceFragment implements
     private SeekBarPreference mBlueColorSlider;
     private SeekBarPreference mSaturationSlider;
     private SeekBarPreference mContrastSlider;
+    private SeekBarPreference mHueSlider;
+    private SeekBarPreference mBrightnessSlider;
     private Preference mResetButton;
 
     @Override
@@ -92,6 +94,14 @@ public class KcalSettingsFragment extends PreferenceFragment implements
             case "contrast_slider":
                 KcalUtils.writeConfigToNode(KcalUtils.KCAL_CONTRAST_NODE, 0, (Integer) newValue);
                 mContrastSlider.setSummary(String.valueOf(newValue));
+                break;
+            case "hue_slider":
+                KcalUtils.writeConfigToNode(KcalUtils.KCAL_HUE_NODE, 0, (Integer) newValue);
+                mHueSlider.setSummary(String.valueOf(newValue));
+                break;
+            case "brightness_slider":
+                KcalUtils.writeConfigToNode(KcalUtils.KCAL_BRIGHTNESS_NODE, 0, (Integer) newValue);
+                mBrightnessSlider.setSummary(String.valueOf(newValue));
                 break;
         }
         return true;
@@ -140,6 +150,14 @@ public class KcalSettingsFragment extends PreferenceFragment implements
         mContrastSlider = (SeekBarPreference) findPreference("contrast_slider");
         configureSlider(mContrastSlider, this);
         mContrastSlider.setMin(224);
+
+        mHueSlider = (SeekBarPreference) findPreference("hue_slider");
+        configureSlider(mHueSlider, this);
+        mHueSlider.setMin(0);
+
+        mBrightnessSlider = (SeekBarPreference) findPreference("brightness_slider");
+        configureSlider(mBrightnessSlider, this);
+        mBrightnessSlider.setMin(224);
     }
 
 
