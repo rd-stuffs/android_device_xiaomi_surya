@@ -1117,5 +1117,5 @@ vendor/lib64/libhdcpsrm.so|0e5aa52dabdb35ffd344d8c0a8a287b10526165f
 vendor/lib64/libmm-hdcpmgr.so|70b7835af68eafc2140727463e47a7b26b6b4515
 vendor/lib64/libwfdhdcpcp.so|fdf996be854aedceda96f388e53e58c897e22d6c
 
-# WLAN - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/cnss-daemon|466fbe54a79f244475adb13ddd0e55f17fee3d66
+# WLAN - from V14.0.1.0.SJGMIXM
+vendor/bin/cnss-daemon|9d5340c8617997207687090940223584c695bc02
