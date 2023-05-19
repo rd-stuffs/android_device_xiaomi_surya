@@ -142,7 +142,9 @@ PRODUCT_PACKAGES += \
     J20CSystemUI \
     J20CWiFi \
     KarnaFrameworks \
-    SuryaFrameworks
+    KarnaWifi \
+    SuryaFrameworks \
+    SuryaWifi
 
 # Overlays (AOSPA)
 PRODUCT_PACKAGES += \
