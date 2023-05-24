@@ -85,15 +85,11 @@
         android:key="vibration"
         android:title="@string/vibration_title">
 
-        <Preference
-            android:key="haptic_settings"
-            android:title="@string/haptic_title"
-            android:summary="@string/haptic_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.haptic.HapticLevelActivity"
-                android:targetPackage="org.lineageos.settings.haptic" />
-        </Preference>
+        <SeekBarPreference
+            android:key="haptic_level_pref"
+            android:title="@string/haptic_level_title"
+            android:defaultValue="@integer/haptic_level_default"
+            android:max="@integer/haptic_level_max" />
 
     </PreferenceCategory>
 

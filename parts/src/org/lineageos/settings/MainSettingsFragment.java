@@ -1,10 +1,15 @@
 package org.lineageos.settings;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
+import androidx.preference.SeekBarPreference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import org.lineageos.settings.dirac.DiracActivity;
 import org.lineageos.settings.speaker.ClearSpeakerActivity;
@@ -12,9 +17,11 @@ import org.lineageos.settings.display.KcalSettingsActivity;
 import org.lineageos.settings.display.LcdFeaturesPreferenceActivity;
 import org.lineageos.settings.refreshrate.RefreshActivity;
 import org.lineageos.settings.thermal.ThermalSettingsActivity;
-import org.lineageos.settings.haptic.HapticLevelActivity;
 
-public class MainSettingsFragment extends PreferenceFragment {
+import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.settings.utils.HapticUtils;
+
+public class MainSettingsFragment extends PreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String PREF_DIRAC_SETTINGS = "dirac_settings";
     private static final String PREF_CLEAR_SPEAKER_SETTINGS = "clear_speaker_settings";
@@ -22,7 +29,6 @@ public class MainSettingsFragment extends PreferenceFragment {
     private static final String PREF_LCD_FEATURES_SETTINGS = "lcd_features_settings";
     private static final String PREF_REFRESH_RATE_SETTINGS = "refresh_rate_settings";
     private static final String PREF_THERMAL_SETTINGS = "thermal_settings";
-    private static final String PREF_HAPTIC_SETTINGS = "haptic_settings";
 
     private Preference mDiracSettingsPref;
     private Preference mClearSpeakerSettingsPref;
@@ -30,7 +36,8 @@ public class MainSettingsFragment extends PreferenceFragment {
     private Preference mLcdFeaturesSettingsPref;
     private Preference mRefreshRateSettingsPref;
     private Preference mThermalSettingsPref;
-    private Preference mHapticSettingsPref;
+
+    private Vibrator mVibrator;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -78,13 +85,37 @@ public class MainSettingsFragment extends PreferenceFragment {
             return true;
         });
 
-        mHapticSettingsPref = (Preference) findPreference(PREF_HAPTIC_SETTINGS);
-        mHapticSettingsPref.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), HapticLevelActivity.class);
-            startActivity(intent);
-            return true;
-        });
+        final SeekBarPreference mHapticLevel = (SeekBarPreference) findPreference(HapticUtils.PREF_LEVEL);
+        if (FileUtils.fileExists(HapticUtils.PATH_LEVEL)) {
+            mVibrator = (Vibrator) getContext().getSystemService(Context.VIBRATOR_SERVICE);
+            if (mVibrator == null || !mVibrator.hasVibrator()) {
+                mVibrator = null;
+            }
+            mHapticLevel.setEnabled(true);
+            mHapticLevel.setOnPreferenceChangeListener(this);
+        } else {
+            mHapticLevel.setSummary(R.string.haptic_level_summary_incompatible);
+            mHapticLevel.setEnabled(false);
+        }
 
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (HapticUtils.PREF_LEVEL.equals(preference.getKey())) {
+            HapticUtils.applyLevel(getContext(), (int) newValue, true);
+            doHapticFeedback();
+        }
+
+        return true;
+    }
+
+    private void doHapticFeedback() {
+        if (mVibrator == null) {
+            return;
+        }
+        mVibrator.vibrate(VibrationEffect.createOneShot(500,
+                VibrationEffect.DEFAULT_AMPLITUDE));
     }
 
 }
