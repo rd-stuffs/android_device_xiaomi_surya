@@ -394,7 +394,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     overlay \
     telephony \
     usb \
-    vibrator \
     wfd \
     wlan
 
@@ -447,8 +446,7 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Vibrator
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+$(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
 
 # WiFi
 PRODUCT_COPY_FILES += \
