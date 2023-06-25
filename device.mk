@@ -152,6 +152,7 @@ PRODUCT_PACKAGES += \
     KarnaFrameworksOverlay \
     KarnaWifiOverlay \
     SuryaFrameworksOverlay \
+    SuryaNfcOverlay \
     SuryaWifiOverlay
 
 # Overlays (AOSPA)
