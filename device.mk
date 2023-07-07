@@ -247,6 +247,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.game.rc \
     init.mi_thermald.rc \
+    init.props.rc \
     init.surya.usb.rc \
     init.surya.perf.rc \
     init.surya.rc \

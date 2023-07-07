@@ -1,0 +1,8 @@
+# Copyright (C) 2024 Paranoid Android
+# SPDX-License-Identifier: Apache-2.0
+
+on property:ro.boot.hwname=karna
+    setprop bluetooth.device.default_name "POCO X3"
+
+on property:ro.boot.hwname=surya
+    setprop bluetooth.device.default_name "POCO X3 NFC"
