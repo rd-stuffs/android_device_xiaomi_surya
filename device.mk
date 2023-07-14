@@ -148,6 +148,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    FullscreenOverlay \
     J20CFrameworksOverlay \
     J20CSettingsOverlay \
     J20CSystemUIOverlay \
