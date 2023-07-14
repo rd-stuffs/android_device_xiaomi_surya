@@ -27,6 +27,7 @@ import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.os.SystemProperties;
 import android.provider.Settings;
 import android.util.Log;
 
@@ -109,8 +110,10 @@ public class ThermalService extends Service {
                     String foregroundApp = taskComponentName.getPackageName();
                     if (!foregroundApp.equals(mPreviousApp)) {
                         if (!isConfigured(foregroundApp) && isListedOnGameSpace(foregroundApp)) {
-                            mThermalUtils.setThermalProfileForce(ThermalUtils.STATE_GAMING);
+                            mThermalUtils.setThermalProfileForce(ThermalUtils.STATE_PERFORMANCE);
+                            SystemProperties.set(Constants.PROP_TOUCH_GAME_MODE, "1");
                         } else {
+                            SystemProperties.set(Constants.PROP_TOUCH_GAME_MODE, "0");
                             mThermalUtils.setThermalProfile(foregroundApp);
                         }
                         mPreviousApp = foregroundApp;

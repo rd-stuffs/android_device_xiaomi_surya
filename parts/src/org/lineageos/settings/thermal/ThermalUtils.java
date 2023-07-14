@@ -152,23 +152,14 @@ public final class ThermalUtils {
         String state = THERMAL_STATE_DEFAULT;
 
         switch (mode) {
-            case STATE_BENCHMARK:
-                state = THERMAL_STATE_BENCHMARK;
-                break;
-            case STATE_BROWSER:
-                state = THERMAL_STATE_BROWSER;
+            case STATE_PERFORMANCE:
+                state = THERMAL_STATE_PERFORMANCE;
                 break;
             case STATE_CAMERA:
                 state = THERMAL_STATE_CAMERA;
                 break;
             case STATE_DIALER:
                 state = THERMAL_STATE_DIALER;
-                break;
-            case STATE_GAMING:
-                state = THERMAL_STATE_GAMING;
-                break;
-            case STATE_STREAMING:
-                state = THERMAL_STATE_STREAMING;
                 break;
         }
 
