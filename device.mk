@@ -145,7 +145,6 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    J20CCarrierConfigOverlay \
     J20CFrameworksOverlay \
     J20CSettingsOverlay \
     J20CSystemUIOverlay \
