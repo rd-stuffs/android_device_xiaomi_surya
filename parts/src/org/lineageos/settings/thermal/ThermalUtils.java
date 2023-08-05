@@ -39,8 +39,8 @@ public final class ThermalUtils {
     protected static final int STATE_CAMERA = 2;
     protected static final int STATE_DIALER = 3;
 
-    private static final String THERMAL_STATE_DEFAULT = "0";
-    private static final String THERMAL_STATE_PERFORMANCE = "10";
+    private static final String THERMAL_STATE_DEFAULT = "10";
+    private static final String THERMAL_STATE_PERFORMANCE = "20";
     private static final String THERMAL_STATE_CAMERA = "12";
     private static final String THERMAL_STATE_DIALER = "8";
 
