@@ -13,6 +13,10 @@ allow mi_thermald self:capability {
 allow mi_thermald vendor_thermal_data_file:dir rw_dir_perms;
 allow mi_thermald vendor_thermal_data_file:file create_file_perms;
 
+# Allow rw_file_perms to sysfs_batteryinfo for mi_thermald
+allow mi_thermald sysfs_batteryinfo:dir { search };
+allow mi_thermald sysfs_batteryinfo:file rw_file_perms;
+
 # Allow mi_thermald to read leds sysfs
 r_dir_file(mi_thermald, sysfs_leds)
 
