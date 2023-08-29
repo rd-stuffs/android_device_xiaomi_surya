@@ -11,6 +11,9 @@
     <dimen name="status_bar_padding_end">3dp</dimen>
     <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_default</dimen>
 
+    <!-- The quick settings margins -->
+    <dimen name="qqs_layout_margin_top">5dp</dimen>
+
     <!-- Location of the power button/fingerprint sensor -->
     <dimen name="physical_power_button_center_screen_location_y">1030px</dimen>
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">1030px</dimen>
