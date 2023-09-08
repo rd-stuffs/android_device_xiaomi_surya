@@ -2,6 +2,10 @@
 pm.dexopt.first-boot=quicken
 pm.dexopt.bg-dexopt=everything
 
+# Display
+ro.sf.force_handle_idle_timeout=1
+ro.sf.defer_refresh_rate_when_off=1
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
