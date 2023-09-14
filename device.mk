@@ -66,6 +66,9 @@ PRODUCT_COPY_FILES += \
 # FM
 BOARD_HAVE_QCOM_FM := true
 
+# Firmware
+$(call inherit-product, vendor/xiaomi/firmware/config.mk)
+
 # GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
