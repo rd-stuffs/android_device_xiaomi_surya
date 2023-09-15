@@ -123,7 +123,6 @@
     <string name="lcd_features_title">LCD features</string>
     <string name="lcd_features_summary">High Brightness Mode, CABC</string>
     <string name="lcd_hbm_title">High Brightness Mode (HBM)</string>
-    <string name="lcd_hbm_tile_title">HBM</string>
     <string name="lcd_hbm_medium">Medium</string>
     <string name="lcd_hbm_high">High</string>
     <string name="lcd_cabc_title">CABC Mode</string>

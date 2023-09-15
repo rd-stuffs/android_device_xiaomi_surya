@@ -123,7 +123,6 @@
     <string name="lcd_features_title">Recursos do LCD</string>
     <string name="lcd_features_summary">Modo de alto brilho, CABC</string>
     <string name="lcd_hbm_title">Modo de alto brilho (HBM)</string>
-    <string name="lcd_hbm_tile_title">HBM</string>
     <string name="lcd_hbm_medium">Médio</string>
     <string name="lcd_hbm_high">Alto</string>
     <string name="lcd_cabc_title">Modo CABC</string>

@@ -118,7 +118,7 @@
         <service
             android:name=".display.HbmTileService"
             android:icon="@drawable/ic_hbm"
-            android:label="@string/lcd_hbm_tile_title"
+            android:label="HBM"
             android:exported="true"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
@@ -129,7 +129,7 @@
         <service
             android:name=".display.CabcTileService"
             android:icon="@drawable/ic_cabc"
-            android:label="@string/lcd_cabc_title"
+            android:label="CABC"
             android:exported="true"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
