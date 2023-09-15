@@ -142,12 +142,6 @@
     <string name="touch_resistant_title">Área resistente a toques</string>
     <string name="touch_resistant_summary">Controle a sensibilidade perto das bordas para evitar toques acidentais</string>
 
-    <!-- Refresh Rate  -->
-    <string name="refresh_title">Taxa de atualização por aplicativo</string>
-    <string name="refresh_summary">Defina uma taxa de atualização específica para cada aplicativo</string>
-    <string name="refresh_default">Padrão</string>
-    <string name="refresh_rate_tile_title">Taxa de atualização</string>
-
     <!-- Haptic Level Settings -->
     <string name="haptic_level_title">Intensidade da vibração</string>
     <string name="haptic_level_summary_incompatible">O kernel não suporta este recurso</string>

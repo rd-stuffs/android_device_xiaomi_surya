@@ -142,12 +142,6 @@
     <string name="touch_resistant_title">Touch-resistant area</string>
     <string name="touch_resistant_summary">Reduces sensitivity near the edges to prevent accidental touches</string>
 
-    <!-- Refresh Rate  -->
-    <string name="refresh_title">Per-app refresh rate</string>
-    <string name="refresh_summary">Set a specific refresh rate for each application</string>
-    <string name="refresh_default">Default</string>
-    <string name="refresh_rate_tile_title">Refresh Rate</string>
-
     <!-- Haptic Level Settings -->
     <string name="haptic_level_title">Haptic feedback level</string>
     <string name="haptic_level_summary_incompatible">Feature not supported</string>

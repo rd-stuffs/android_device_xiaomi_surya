@@ -106,33 +106,6 @@
         </service>
 
         <activity
-            android:name=".refreshrate.RefreshActivity"
-            android:label="@string/refresh_title"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name=".refreshrate.RefreshService"
-            android:exported="true"
-            android:permission="RefreshService">
-        </service>
-
-        <service
-            android:name=".refreshrate.RefreshTileService"
-            android:label="@string/refresh_rate_tile_title"
-            android:exported="true"
-            android:icon="@drawable/ic_refresh_tile"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
-        <activity
             android:name=".display.KcalSettingsActivity"
             android:exported="false"
             android:label="@string/kcal_settings_title">
