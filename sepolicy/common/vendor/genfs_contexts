@@ -1,6 +1,3 @@
-# Kernelspace battery saver
-genfscon sysfs /module/battery_saver/parameters/enabled u:object_r:sysfs_battery_saver:s0
-
 # Label wakeup nodes symlinks from /sys/class/wakeup
 genfscon sysfs /devices/virtual/misc/msm_aac/wakeup                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_alac/wakeup                                 u:object_r:sysfs_wakeup:s0
