@@ -25,7 +25,7 @@ on init
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/modalias
 
     chown system system /sys/touchpanel/double_tap
-    chmod 0644 /sys/touchpanel/double_tap
+    chmod 0664 /sys/touchpanel/double_tap
 
     chown system system /dev/spidev0.1
     chmod 0660 /dev/spidev0.1
