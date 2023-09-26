@@ -34,11 +34,6 @@ PRODUCT_PACKAGES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Dex/ART optimization
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
-USE_DEX2OAT_DEBUG := false
-
 # Display
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/display/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -81,13 +76,9 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
-    init.surya.usb.rc \
     init.surya.perf.rc \
     init.surya.rc \
-    init.target.rc \
-    init.mi.usb.sh \
-    init.surya.usb.sh \
-    init.qti.dcvs.sh
+    init.target.rc
 
 # IR
 PRODUCT_PACKAGES += \
@@ -148,12 +139,9 @@ PRODUCT_PACKAGES += \
     J20CFrameworksOverlay \
     J20CSettingsOverlay \
     J20CSystemUIOverlay \
-    J20CWifiOverlay \
     KarnaFrameworksOverlay \
-    KarnaWifiOverlay \
     SuryaFrameworksOverlay \
-    SuryaNfcOverlay \
-    SuryaWifiOverlay
+    SuryaNfcOverlay
 
 # Overlays (AOSPA)
 PRODUCT_PACKAGES += \
@@ -225,6 +213,3 @@ PRODUCT_COPY_FILES += \
 
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
-
-# Device-specific settings
-$(call inherit-product, device/xiaomi/surya/parts/parts.mk)

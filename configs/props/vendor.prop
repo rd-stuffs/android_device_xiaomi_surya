@@ -21,7 +21,6 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
 debug.sf.disable_backpressure=1
-debug.sf.layer_caching_active_layer_timeout_ms=1000
 debug.renderengine.backend=skiaglthreaded
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_display_power_timer_ms=1000
@@ -32,7 +31,6 @@ ro.vendor.display.ad=1
 ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
 ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
 ro.vendor.display.sensortype=2
-vendor.display.qdcm.mode_combine=1
 vendor.display.disable_idle_time_hdr=1
 vendor.display.disable_idle_time_video=1
 vendor.display.disable_rotator_downscale=1

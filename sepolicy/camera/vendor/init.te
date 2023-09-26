@@ -1,2 +1,0 @@
-# Allow init to bind mount adsprpcd file
-allow init adsprpcd_file:file mounton;
