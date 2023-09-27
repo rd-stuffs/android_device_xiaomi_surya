@@ -177,13 +177,13 @@
         <!-- GPU MIN_FREQUENCY resource opcode, value-->
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="msmsteppe"
-            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2016, 0x40800100, 1708,
+            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2208, 0x40800100, 1708,
                        0x4280C000, 596" />
 
        <Config
            Id="0x00001083" Enable="true" Timeout="400" Target="sdmmagpie"
-           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1843, 0x40800100, 1708,
-                      0x4280C000, 650" />
+           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2438, 0x40800100, 1804,
+                      0x4280C000, 800" />
 
     <!--Vertical Scroll boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -231,7 +231,7 @@
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdmmagpie"
             Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1324, 0x40C00000, 2,
-                       0x4280C000, 565" />
+                       0x4280C000, 800" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -250,7 +250,7 @@
 
         <Config
             Id="0x00001086" Enable="true" Target="sdmmagpie"
-            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1708,
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1747,
                        0x40800100, 1708, 0x42C10000, 0x1" />
 
     <!--PackageInstall boost-->
