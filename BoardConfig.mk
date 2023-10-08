@@ -125,7 +125,8 @@ TARGET_SCREEN_DENSITY := 440
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
-include device/xiaomi/surya/sepolicy/J20C-sepolicy.mk
+include device/xiaomi/sepolicy/SEPolicy.mk
+include device/xiaomi/surya/sepolicy/surya-sepolicy.mk
 TARGET_SEPOLICY_DIR := msmsteppe
 
 # Verified Boot
