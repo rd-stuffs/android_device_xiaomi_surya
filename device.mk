@@ -178,7 +178,6 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_O
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
-    alarm \
     audio \
     av \
     bt \
