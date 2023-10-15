@@ -69,12 +69,6 @@ service vibrator_calibration /vendor/bin/vibrator_calibration
      disabled
      oneshot
 
-service mi_thermald /system/vendor/bin/mi_thermald
-    class core
-    user root
-    group system
-    disabled
-
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
