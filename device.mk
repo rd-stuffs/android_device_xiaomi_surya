@@ -76,6 +76,7 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
+    init.game.rc \
     init.surya.perf.rc \
     init.surya.rc \
     init.target.rc

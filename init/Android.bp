@@ -19,6 +19,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.game.rc",
+    src: "init.game.rc",
+    sub_dir: "init",
+    system_ext_specific: true
+}
+
+prebuilt_etc {
     name: "init.surya.perf.rc",
     src: "init.surya.perf.rc",
     sub_dir: "init",
