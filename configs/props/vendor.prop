@@ -69,6 +69,9 @@ ro.telephony.iwlan_operation_mode=legacy
 # Keystore
 ro.hardware.keystore_desede=true
 
+# Perf
+ro.vendor.extension_library=libqti-perfd-client.so
+
 # Radio
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.force_on_dc=true
