@@ -17,4 +17,7 @@
     <!-- Whether usage of the proximity sensor during doze is supported -->
     <bool name="config_doze_proximity_sensor_supported">false</bool>
 
+    <!-- Whether device supports QTI Boost Framework -->
+    <bool name="config_supportsBoostFramework">false</bool>
+
 </resources>
