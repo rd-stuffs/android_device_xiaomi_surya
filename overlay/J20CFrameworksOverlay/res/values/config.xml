@@ -375,9 +375,6 @@
         <item>"/system/framework/framework.jar"</item>
         <item>"/system/framework/services.jar"</item>
         <item>"/system/framework/ext.jar"</item>
-        <item>"/system/framework/QPerformance.jar"</item>
-        <item>"/system/framework/QXPerformance.jar"</item>
-        <item>"/system/framework/UxPerformance.jar"</item>
         <item>"/system/lib/libEGL.so"</item>
         <item>"/system/lib/libGLESv1_CM.so"</item>
         <item>"/system/lib/libGLESv2.so"</item>

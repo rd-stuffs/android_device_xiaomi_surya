@@ -171,7 +171,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     keymaster \
     media \
     overlay \
-    perf \
     telephony \
     usb \
     wfd \
