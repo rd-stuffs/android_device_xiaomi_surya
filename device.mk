@@ -108,6 +108,8 @@ PRODUCT_COPY_FILES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/xiaomi
 
 # NeuralNetworks
@@ -160,6 +162,10 @@ PRODUCT_PACKAGES += \
 # Platform
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
+
+# Power
+TARGET_PROVIDES_POWERHAL := true
+PRODUCT_PACKAGES += android.hardware.power-service.xiaomi-libperfmgr
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
