@@ -20,7 +20,7 @@ camera.disable_zsl_mode=1
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
-debug.sf.enable_gl_backpressure=1
+debug.sf.disable_backpressure=1
 debug.renderengine.backend=skiaglthreaded
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_display_power_timer_ms=1000
