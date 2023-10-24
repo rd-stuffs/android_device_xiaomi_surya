@@ -1,5 +1,6 @@
 # Audio
 vendor.audio.feature.kpi_optimize.enable=false
+vendor.audio.offload.buffer.size.kb=256
 
 # Volume
 ro.config.media_vol_default=8
