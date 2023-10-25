@@ -81,6 +81,7 @@ PRODUCT_PACKAGES += \
     init.surya.rc \
     init.target.charger.rc \
     init.target.rc \
+    init.qti.dcvs.sh \
     init.qti.early_init.sh
 
 # IR
