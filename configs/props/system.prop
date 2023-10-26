@@ -5,6 +5,9 @@ ro.sf.defer_refresh_rate_when_off=1
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
+# GameSpace
+sys.perf_profile=0
+
 # Gboard
 ro.com.google.ime.height_ratio=1.075
 ro.com.google.ime.kb_pad_port_b=8
