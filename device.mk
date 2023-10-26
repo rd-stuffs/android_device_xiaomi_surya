@@ -77,10 +77,13 @@ PRODUCT_COPY_FILES += \
 # Init scripts
 PRODUCT_PACKAGES += \
     init.game.rc \
+    init.surya.usb.rc \
     init.surya.perf.rc \
     init.surya.rc \
     init.target.charger.rc \
     init.target.rc \
+    init.mi.usb.sh \
+    init.surya.usb.sh \
     init.qti.dcvs.sh \
     init.qti.early_init.sh
 
