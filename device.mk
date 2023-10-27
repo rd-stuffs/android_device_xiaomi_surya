@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
     init.game.rc \
     init.surya.perf.rc \
     init.surya.rc \
+    init.target.charger.rc \
     init.target.rc \
     init.qti.early_init.sh
 
