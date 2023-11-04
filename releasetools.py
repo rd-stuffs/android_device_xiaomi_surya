@@ -45,4 +45,5 @@ def OTA_InstallEnd(info, input_zip):
   AddImageRadio(info, input_zip, "uefi_sec.mbn", "/dev/block/bootdevice/by-name/uefisecapp")
   AddImageRadio(info, input_zip, "xbl.elf", "/dev/block/bootdevice/by-name/xbl")
   AddImageRadio(info, input_zip, "xbl_config.elf", "/dev/block/bootdevice/by-name/xbl_config")
+  info.script.AppendExtra('run_program("/system/bin/rm", "-rf", "/data/system/package_cache");')
   return
