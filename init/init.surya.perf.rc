@@ -19,6 +19,11 @@ on early-init
     write /sys/block/sdf/queue/iostats 0
     write /sys/block/sdf/queue/nr_requests 256
 
+on boot
+    # Set thermal mode to evaluation
+    chown system system /sys/class/thermal/thermal_message/sconfig
+    write /sys/class/thermal/thermal_message/sconfig 10
+
 on property:vendor.post_boot.parsed=1
     # Restore default I/O performance tuning
     write /sys/block/mmcblk0/queue/nr_requests 128

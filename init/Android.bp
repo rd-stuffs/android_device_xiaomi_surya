@@ -26,6 +26,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.mi_thermald.rc",
+    src: "init.mi_thermald.rc",
+    sub_dir: "init",
+    vendor: true
+}
+
+prebuilt_etc {
     name: "init.surya.usb.rc",
     src: "init.qcom.usb.rc",
     filename_from_src: true,

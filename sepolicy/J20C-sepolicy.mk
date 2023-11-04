@@ -12,7 +12,8 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/surya/sepolicy/ir/vendor \
     device/xiaomi/surya/sepolicy/fingerprint/vendor \
     device/xiaomi/surya/sepolicy/leds/vendor \
-    device/xiaomi/surya/sepolicy/qcom-extra/vendor
+    device/xiaomi/surya/sepolicy/qcom-extra/vendor \
+    device/xiaomi/surya/sepolicy/thermal/vendor
 
 J20C_SEPOLICY_INCLUDED := true
 endif

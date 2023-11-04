@@ -941,7 +941,21 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|dcdca96d86411b7cfe7200c07570a341d35e5607
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|5496f7816036ef71aec0116864032f8a6078aee7
 
-# Thermal - from LA.UM.9.1.r1-12900-SMxxx0.0
+# Thermal - from V14.0.1.0.SJGMIXM
+vendor/bin/mi_thermald|a00af140e404efe958b7caa0e4d67db90a0d72eb
+vendor/etc/thermal-4k.conf|1648b94b29fcbacd65a5695eccae404274d9e1e0
+vendor/etc/thermal-arvr.conf|33cbfff90543ceaedf7c4f0d45caf11e9ef9a52f
+vendor/etc/thermal-camera.conf|6882a03c248eb3462bcc2f40754ada2e3d069f08
+vendor/etc/thermal-chg-only.conf|d7affb7547a6f07267b8dddd9d7e549f9fdeb498
+vendor/etc/thermal-map.conf|6072eb7de179825c85d5423c49069e3999810e3f
+vendor/etc/thermal-nolimits.conf|be2040b00b09f1b719c7deef7590af9f634ad694
+vendor/etc/thermal-normal.conf|e8b6686ff365e4f6860cb23c37a7fd6cefe3b946
+vendor/etc/thermal-phone.conf|e736e2bf8425977dd611098efcf14fa13a3ad3b5
+vendor/etc/thermal-tgame.conf|d30fdf9ae2cce80a05a3ccd86d8798466d4cdb80
+vendor/etc/thermald-devices.conf|eaa11ec5435404df861a76e5c857e93028ed7ef4
+vendor/lib64/libthermalfeature.so|039c92ea5b7532568c63035a51426d9801eaa097
+
+# Thermal Engine - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/thermal-engine|141089ee2a5ea252d90481d3a46bc423ec0ce18c
 vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
 vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100

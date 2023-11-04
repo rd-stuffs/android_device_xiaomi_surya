@@ -72,3 +72,6 @@ persist.vendor.flash.recovery=1
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+
+# Thermal
+vendor.sys.thermal.data.path=/data/vendor/thermal/

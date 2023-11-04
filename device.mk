@@ -79,6 +79,7 @@ PRODUCT_COPY_FILES += \
 # Init scripts
 PRODUCT_PACKAGES += \
     init.game.rc \
+    init.mi_thermald.rc \
     init.surya.usb.rc \
     init.surya.perf.rc \
     init.surya.rc \
