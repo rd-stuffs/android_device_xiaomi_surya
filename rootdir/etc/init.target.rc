@@ -79,6 +79,9 @@ on boot
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
 
+    # default country code
+    setprop ro.boot.wificountrycode 00
+
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
