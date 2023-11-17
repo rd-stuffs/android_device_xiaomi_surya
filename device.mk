@@ -158,6 +158,7 @@ PRODUCT_PACKAGES += \
     J20CSettingsOverlay \
     J20CSystemUIOverlay \
     KarnaFrameworksOverlay \
+    SuryaCarrierConfigOverlay \
     SuryaFrameworksOverlay
 
 # Overlays (AOSPA)
