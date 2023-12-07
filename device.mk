@@ -119,7 +119,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.disable_idle_time_hdr=1 \
     vendor.display.disable_idle_time_video=1 \
     vendor.display.disable_rotator_downscale=1 \
-    vendor.display.qdcm.mode_combine=1
+    vendor.display.qdcm.mode_combine=1 \
+    vendor.display.vds_allow_hwc=1
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.display.ad=1 \
