@@ -190,6 +190,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     keymaster \
     media \
     overlay \
+    qseecomd \
     telephony \
     usb \
     wfd \
