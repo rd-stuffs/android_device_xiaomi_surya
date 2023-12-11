@@ -403,9 +403,6 @@ vendor/lib64/libcacertclient.so|69ae73b9be13507ff39398ac5813ad709b8b7c32
 vendor/lib64/libjnihelper.so|ae2919dbdbfa489ebeb584674663e908c4cfb9a5
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so|1633c31212d1ea9338b79ebfc2476f83424f36ee
 
-# Charger - HVDCP - from V14.0.1.0.SJGMIXM
-vendor/bin/hvdcp_opti|2f11f89c6c7741f6837d873939b392217e2cc3c1
-
 # CNE - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/app/CneApp/CneApp.apk|345dc6c677e9bd7a7d36033b8955e90d2a1594d5
 vendor/bin/cnd|d33924372818ad112e5ddeec719aadbf33fd4ef2
