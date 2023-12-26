@@ -1,3 +1,6 @@
+# Filesystem
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
 # GameSpace
 sys.perf_profile=0
 
