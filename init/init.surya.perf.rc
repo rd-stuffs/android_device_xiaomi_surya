@@ -18,6 +18,8 @@ on early-init
     write /sys/block/sde/queue/nr_requests 256
     write /sys/block/sdf/queue/iostats 0
     write /sys/block/sdf/queue/nr_requests 256
+    write /sys/block/sda/queue/iosched/group_idle 0
+    write /sys/block/sda/queue/iosched/slice_idle 0
 
 on late-init
     # Start services early for bootanim
