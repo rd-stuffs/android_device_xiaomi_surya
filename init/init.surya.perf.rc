@@ -57,6 +57,12 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us 20000
     write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/pl 1
 
+    # Configure CPU input boost
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 6:1324800"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 200
+    write /sys/module/cpu_boost/parameters/powerkey_input_boost_freq "0:1804800 6:2169600"
+    write /sys/module/cpu_boost/parameters/powerkey_input_boost_ms 750
+
     # Configure scheduler parameters
     write /proc/sys/kernel/sched_downmigrate 85
     write /proc/sys/kernel/sched_upmigrate 95
