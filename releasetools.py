@@ -25,7 +25,6 @@ def AddImageRadio(info, input_zip, basename, dest):
 
 def OTA_InstallEnd(info, input_zip):
   AddImage(info, input_zip, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
-  AddImage(info, input_zip, "recovery.img", "/dev/block/bootdevice/by-name/recovery")
   AddImage(info, input_zip, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
   AddImage(info, input_zip, "vbmeta_system.img", "/dev/block/bootdevice/by-name/vbmeta_system")
   AddImageRadio(info, input_zip, "abl.elf", "/dev/block/bootdevice/by-name/abl")
