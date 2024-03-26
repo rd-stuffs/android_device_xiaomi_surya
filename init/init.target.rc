@@ -1,8 +1,6 @@
 # Copyright (C) 2023 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
-import /vendor/etc/init/hw/init.target.charger.rc
-
 on early-init
     write /proc/sys/kernel/sched_boost 1
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.early_init.sh

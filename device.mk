@@ -83,7 +83,6 @@ PRODUCT_PACKAGES += \
     init.surya.usb.rc \
     init.surya.perf.rc \
     init.surya.rc \
-    init.target.charger.rc \
     init.target.rc \
     init.mi.usb.sh \
     init.surya.usb.sh \
