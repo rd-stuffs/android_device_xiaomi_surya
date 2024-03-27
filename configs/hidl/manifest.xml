@@ -30,6 +30,12 @@
         <fqname>@1.0::IContexthub/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.drm</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.3::ICryptoFactory/wfdhdcp</fqname>
+        <fqname>@1.3::IDrmFactory/wfdhdcp</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.ir</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IConsumerIr/default</fqname>
@@ -193,11 +199,6 @@
         <fqname>@1.0::IMwqemAdapter/MwqemAdapter</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.qccvndhal</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IQccvndhal/qccvndhal</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.qseecom</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IQSEECom/default</fqname>
@@ -276,11 +277,6 @@
         <name>vendor.qti.hardware.soter</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ISoter/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.tui_comm</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ITuiComm/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.vpp</name>
