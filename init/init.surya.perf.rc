@@ -19,6 +19,14 @@ on early-init
     write /sys/block/sdf/queue/iostats 0
     write /sys/block/sdf/queue/nr_requests 256
 
+on late-init
+    # Start services early for bootanim
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-4
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
+
 on boot
     # Set thermal mode to evaluation
     chown system system /sys/class/thermal/thermal_message/sconfig
