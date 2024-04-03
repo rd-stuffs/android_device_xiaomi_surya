@@ -430,12 +430,6 @@
       "Value": "20000"
     },
     {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
       "PowerHint": "DISPLAY_INACTIVE",
       "Node": "TASchedtuneBoost",
       "Duration": 0,
