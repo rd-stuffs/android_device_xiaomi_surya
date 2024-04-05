@@ -11,8 +11,14 @@
     <!-- Device model (Build.MODEL) to spoof for netflix, if not empty -->
     <string name="config_netflixSpoofModel" translatable="false">M2101K9G</string>
 
-    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
+    <!-- Array of:
+        - Path to fast charging status file
+        - Delimiter ";"
+        - Value if fast charging is active
+        Used to detect whether an oem fast charger is active
+        Example: <item>/sys/class/power_supply/battery/fastchg_status;1</item>
+    -->
+    <string-array name="config_oemFastChargerStatusPaths" translatable="false">/sys/class/power_supply/bms/fastcharge_mode;1</string-array>
 
     <!-- Whether usage of the proximity sensor during doze is supported -->
     <bool name="config_doze_proximity_sensor_supported">false</bool>
