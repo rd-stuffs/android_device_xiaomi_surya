@@ -60,6 +60,10 @@ PRODUCT_COPY_FILES += \
 # FM
 BOARD_HAVE_QCOM_FM := true
 
+# FUSE passthrough
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.fuse.passthrough.enable=true
+
 # Firmware
 $(call inherit-product, vendor/xiaomi/firmware/config.mk)
 

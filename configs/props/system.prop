@@ -1,6 +1,3 @@
-# FUSE passthrough
-persist.sys.fuse.passthrough.enable=true
-
 # GameSpace
 sys.perf_profile=0
 
