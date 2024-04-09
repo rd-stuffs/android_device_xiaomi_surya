@@ -4,14 +4,6 @@
 # Sensors
 /vendor/bin/hw/android\.hardware\.sensors@2.1-service\.xiaomi-multihal			                                u:object_r:hal_sensors_default_exec:s0
 
-# Vibrator AIDL
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi u:object_r:hal_vibrator_default_exec:s0
-
-# Vibrator calibration
-/(vendor|system/vendor)/bin/vibrator_calibration    u:object_r:hal_vibrator_default_exec:s0
-/(vendor|system/vendor)/lib(64)?/libqmi_cci\.so     u:object_r:same_process_hal_file:s0
-/sys/devices/platform/soc/884000.i2c/i2c-3/3-005a(/.*)?  u:object_r:sysfs_vibrator:s0
-
 # Fastcharge
 /sys/class/power_supply/bms/fastcharge_mode                             u:object_r:vendor_sysfs_battery_supply:s0
 

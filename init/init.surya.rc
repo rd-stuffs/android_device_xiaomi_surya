@@ -58,24 +58,6 @@ on post-fs-data
     mkdir /data/vendor/goodix 0777 system system
     mkdir /data/vendor/fpc 0777 system system
 
-on boot
-    # access permissions for vibrator calibration
-    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/cali
-    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/cali_save
-    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/f0_save
-    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/osc_save
-    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/osc_cali
-
-on property:sys.boot_completed=1
-    start vibrator_calibration
-
-service vibrator_calibration /vendor/bin/vibrator_calibration
-     class late_start
-     user system
-     group system
-     disabled
-     oneshot
-
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
