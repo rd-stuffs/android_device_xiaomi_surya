@@ -207,7 +207,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     init \
     media \
     overlay \
-    qseecomd \
     telephony \
     usb \
     vibrator \
