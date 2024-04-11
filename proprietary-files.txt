@@ -981,7 +981,7 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|dcdca96d86411b7cfe7200c075
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|5496f7816036ef71aec0116864032f8a6078aee7
 
 # Thermal - from V14.0.1.0.SJGMIXM
-vendor/bin/mi_thermald|a00af140e404efe958b7caa0e4d67db90a0d72eb
+vendor/bin/mi_thermald|2cb2d46219c6bc7005b61a6960b9f674049a586c
 vendor/bin/thermal-engine|2f754748839883f81de46d8769ee0620d7a3e289
 vendor/etc/thermal-4k.conf|1648b94b29fcbacd65a5695eccae404274d9e1e0
 vendor/etc/thermal-arvr.conf|33cbfff90543ceaedf7c4f0d45caf11e9ef9a52f
