@@ -81,14 +81,6 @@ on boot
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
 
-#charger
-service charger /system/bin/charger
-    class charger
-    user system
-    group system graphics input
-    capabilities SYS_BOOT
-    seclabel u:r:charger:s0
-
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core

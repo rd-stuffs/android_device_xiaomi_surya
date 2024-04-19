@@ -26,10 +26,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
-# Charger
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.charger.enable_suspend=true
-
 # ContextHub
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
@@ -88,11 +84,6 @@ PRODUCT_COPY_FILES += \
 
 # GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
-    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -210,6 +201,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     audio \
     av \
     bt \
+    charging \
     display \
     gps \
     init \
@@ -237,10 +229,6 @@ PRODUCT_COPY_FILES += \
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
-
-# Suspend
-PRODUCT_PACKAGES += \
-    libsuspend
 
 # Userspace fastboot
 PRODUCT_PACKAGES += \
