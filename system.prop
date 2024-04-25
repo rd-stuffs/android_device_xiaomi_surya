@@ -22,6 +22,9 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
 
+# MTE
+arm64.memtag.process.system_server=off
+
 # Netflix custom property
 ro.netflix.bsp_rev=Q6150-17263-1
 
@@ -43,3 +46,6 @@ ro.recovery.ui.margin_height=48
 
 # WiFi
 wifi.interface=wlan0
+
+# Telephony
+ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
