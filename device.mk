@@ -1,6 +1,9 @@
 # Copyright (C) 2023 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
+# Camera
+$(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -192,7 +195,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     FullscreenOverlay \
-    J20CApertureOverlay \
     J20CFrameworksOverlay \
     J20CSettingsOverlay \
     J20CSystemUIOverlay \
