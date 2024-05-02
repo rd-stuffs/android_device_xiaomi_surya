@@ -1,4 +1,4 @@
-# Copyright (C) 2023 Paranoid Android
+# Copyright (C) 2024 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
 on early-init
@@ -102,7 +102,3 @@ on property:vendor.post_boot.parsed=1
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
-
-on property:persist.sys.device_provisioned=1
-    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
-    setprop dalvik.vm.dex2oat-threads 6

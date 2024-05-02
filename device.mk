@@ -1,8 +1,17 @@
-# Copyright (C) 2023 Paranoid Android
+# Copyright (C) 2024 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
 # Camera
 $(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
+
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
+# Firmware
+$(call inherit-product, vendor/xiaomi/firmware/config.mk)
+
+# Vendor
+$(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
 # XiaomiParts
 $(call inherit-product, packages/apps/XiaomiParts/parts.mk)
@@ -16,6 +25,42 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
 
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 \
+    persist.vendor.audio.voicecall.speaker.stereo=true
+
+PRODUCT_ODM_PROPERTIES += \
+    persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.voicecomm=true \
+    persist.vendor.audio.fluence.voicerec=false \
+    ro.vendor.audio.sdk.fluencetype=none \
+    vendor.audio.feature.kpi_optimize.enable=false \
+    vendor.audio.offload.buffer.size.kb=256
+
+PRODUCT_ODM_PROPERTIES += \
+    ro.config.media_vol_default=8 \
+    ro.config.media_vol_steps=25 \
+    ro.config.vc_call_vol_default=5 \
+    ro.config.vc_call_vol_steps=10
+
+# APK Verity
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.apk_verity.mode=2
+
+# Bluetooth
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.bluetooth.modem_nv_support=true \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac \
+    persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false \
+    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
+    persist.vendor.qcom.bluetooth.scram.enabled=true \
+    persist.vendor.qcom.bluetooth.soc=cherokee \
+    persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
+    ro.vendor.bluetooth.wipower=false \
+    vendor.qcom.bluetooth.soc=cherokee
+
 # Camera
 PRODUCT_PACKAGES += \
     libpiex_shim
@@ -24,13 +69,17 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    vendor.qti.hardware.camera.device@1.0.vendor \
+    libdng_sdk.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
+
+PRODUCT_VENDOR_PROPERTIES += \
+    camera.disable_zsl_mode=1
 
 # ContextHub
 PRODUCT_PACKAGES += \
@@ -43,12 +92,16 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor \
     android.hardware.keymaster@4.1.vendor
 
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.crypto.volume.filenames_mode=aes-256-cts
+
 # Cutout
+PRODUCT_PACKAGES += \
+    AvoidAppsInCutoutOverlay \
+    SuryaFullscreen
+
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_hide_display_cutout=true
-
-# Dalvik
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Display
 PRODUCT_COPY_FILES += \
@@ -57,15 +110,64 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.renderengine.backend=skiaglthreaded \
+    debug.sf.defer_refresh_rate_when_off=1 \
+    debug.sf.disable_backpressure=1 \
+    ro.surface_flinger.protected_contents=true \
+    ro.vendor.display.sensortype=2 \
+    vendor.display.disable_idle_time_hdr=1 \
+    vendor.display.disable_idle_time_video=1 \
+    vendor.display.disable_rotator_downscale=1 \
+    vendor.display.qdcm.mode_combine=1
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.display.ad=1 \
+    ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
+    ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
+
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.frame_rate_multiple_threshold=120 \
+    debug.sf.layer_caching_active_layer_timeout_ms=1000 \
+    ro.surface_flinger.set_idle_timer_ms=2500 \
+    ro.surface_flinger.set_touch_timer_ms=2500 \
+    ro.surface_flinger.set_display_power_timer_ms=500 \
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
+    vendor.display.idle_time=0 \
+    vendor.display.idle_time_inactive=0
+
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.use_phase_offsets_as_durations=1 \
+    debug.sf.late.sf.duration=10500000 \
+    debug.sf.late.app.duration=20500000 \
+    debug.sf.early.sf.duration=16000000 \
+    debug.sf.early.app.duration=16500000 \
+    debug.sf.earlyGl.sf.duration=13500000 \
+    debug.sf.earlyGl.app.duration=21000000
+
+PRODUCT_ODM_PROPERTIES += \
+    ro.surface_flinger.has_wide_color_display=false \
+    ro.surface_flinger.has_HDR_display=false
+
+# DPM
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.dpmhalservice.enable=1
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.drm-service.clearkey \
     libdrm.vendor
 
-# Filesystems table
+PRODUCT_VENDOR_PROPERTIES += \
+    drm.service.enabled=true
+
+# Filesystems
 PRODUCT_PACKAGES += fstab.qcom
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -79,27 +181,40 @@ PRODUCT_COPY_FILES += \
 # FM
 BOARD_HAVE_QCOM_FM := true
 
-# FUSE passthrough
+# FRP
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# FUSE
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
 
-# Firmware
-$(call inherit-product, vendor/xiaomi/firmware/config.mk)
+# Gboard
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.com.google.ime.height_ratio=1.075 \
+    ro.com.google.ime.kb_pad_port_b=8
 
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
-# GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
 
+# HVDCP
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.cp.fcc_main_ua=400000 \
+    persist.vendor.cp.taper_term_mv=6500 \
+    persist.vendor.cp.vbus_offset_mv=1040
+
 # IDC
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc)
+
+# Incremental FS
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.incremental.enable=1
 
 # Init scripts
 PRODUCT_PACKAGES += \
@@ -116,8 +231,7 @@ PRODUCT_PACKAGES += \
 
 # IR
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
+    android.hardware.ir-service.example
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
@@ -126,9 +240,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
 
+# Keystore
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.keystore_desede=true
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
+
+# LMK
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.lmk.force_inkernel_lmk=true
 
 # Media
 PRODUCT_PACKAGES += \
@@ -169,6 +291,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/xiaomi
 
+# Netflix
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.netflix.bsp_rev=Q6150-17263-1
+
 # NeuralNetworks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
@@ -176,7 +302,6 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
-    SecureElement \
     Tag \
     android.hardware.nfc@1.2.vendor \
     com.android.nfc_extras \
@@ -196,27 +321,25 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AvoidAppsInCutoutOverlay \
-    FullscreenOverlay \
-    J20CFrameworksOverlay \
-    J20CSettingsOverlay \
-    J20CSystemUIOverlay \
-    KarnaFrameworksOverlay \
-    SuryaCarrierConfigOverlay \
-    SuryaFrameworksOverlay
+    KarnaFrameworks \
+    SuryaCarrierConfig \
+    SuryaFrameworks \
+    SuryaSettings \
+    SuryaSystemUI
 
 # Overlays (AOSPA)
 PRODUCT_PACKAGES += \
-    AOSPAFrameworksJ20COverlay \
-    AOSPASettingsJ20COverlay
+    AOSPASuryaFrameworks \
+    AOSPASuryaSettings \
+    AOSPASuryaSystemUI
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Perf
-PRODUCT_PACKAGES += \
-    libqti-perfd-client
+PRODUCT_PACKAGES += libqti-perfd-client
+PRODUCT_VENDOR_PROPERTIES += ro.vendor.extension_library=libqti-perfd-client.so
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
@@ -249,6 +372,17 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wfd \
     wlan
 
+# Radio
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.radio.add_power_save=0 \
+    persist.vendor.radio.atfwd.start=true \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.force_on_dc=true \
+    persist.vendor.radio.manual_nw_rej_ct=1 \
+    persist.vendor.radio.mt_sms_ack=30 \
+    persist.vendor.radio.process_sups_ind=1 \
+    persist.vendor.radio.report_codec=1
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
@@ -263,8 +397,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.sensors.enable.mag_filter=true
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
+
+# Thermal
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.sys.thermal.data.path=/data/vendor/thermal/
 
 # Userspace fastboot
 PRODUCT_PACKAGES += \
@@ -277,6 +418,3 @@ PRODUCT_COPY_FILES += \
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
-
-# Vendor blobs
-$(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)

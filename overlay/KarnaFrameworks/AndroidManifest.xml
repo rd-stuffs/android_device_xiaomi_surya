@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.karna">
+
+    <application android:hasCode="false"/>
+
+    <overlay
+        android:isStatic="true"
+        android:priority="900"
+        android:requiredSystemPropertyName="ro.boot.hwname"
+        android:requiredSystemPropertyValue="karna"
+        android:targetPackage="android" />
+</manifest>

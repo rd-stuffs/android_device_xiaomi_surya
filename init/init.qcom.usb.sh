@@ -1,5 +1,5 @@
 #!/vendor/bin/sh
-# Copyright (C) 2023 Paranoid Android
+# Copyright (C) 2024 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
 # Set platform variables

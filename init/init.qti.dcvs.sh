@@ -1,5 +1,5 @@
 #! /vendor/bin/sh
-# Copyright (C) 2023 Paranoid Android
+# Copyright (C) 2024 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
     for device in /sys/devices/platform/soc

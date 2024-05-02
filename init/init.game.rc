@@ -1,4 +1,4 @@
-# Copyright (C) 2023 Paranoid Android
+# Copyright (C) 2024 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
 on property:sys.perf_profile=1
@@ -26,5 +26,15 @@ on property:sys.perf_profile=0
     write /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 806400
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 6:1324800"
     write /sys/module/cpu_boost/parameters/input_boost_ms 200
+    write /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/governor bw_hwmon
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+
+on property:vendor.post_boot.parsed=1
+    write /sys/class/kgsl/kgsl-3d0/force_bus_on 0
+    write /sys/class/kgsl/kgsl-3d0/force_clk_on 0
+    write /sys/class/kgsl/kgsl-3d0/force_no_nap 0
+    write /sys/class/kgsl/kgsl-3d0/force_rail_on 0
+    write /sys/class/kgsl/kgsl-3d0/idle_timer 63
+    write /sys/class/kgsl/kgsl-3d0/throttling 1
     write /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/governor bw_hwmon
     write /sys/module/lpm_levels/parameters/sleep_disabled 0

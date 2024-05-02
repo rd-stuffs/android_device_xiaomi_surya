@@ -1,10 +1,8 @@
-# Copyright (C) 2023 Paranoid Android
+# Copyright (C) 2024 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
+# Android
 DEVICE_PATH := device/xiaomi/surya
-
-BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -24,24 +22,27 @@ TARGET_OTA_ASSERT_DEVICE := surya,karna
 
 # Audio
 BOARD_SUPPORTS_SOUND_TRIGGER := false
-TARGET_PROVIDES_AUDIO_EXTNS := true
-
-# Board Info
-TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Bootloader
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := sm6150
-TARGET_NO_BOOTLOADER := true
+
+# Build
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_gesture"
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/hidl/device_framework_compatibility_matrix.xml
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/configs/vintf/device_framework_compatibility_matrix.xml
 
 ODM_MANIFEST_SKUS += surya
-ODM_MANIFEST_SURYA_FILES := $(DEVICE_PATH)/configs/hidl/manifest-nfc.xml
+ODM_MANIFEST_SURYA_FILES := $(DEVICE_PATH)/configs/vintf/manifest-nfc.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_surya
@@ -104,11 +105,6 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
-
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
@@ -119,7 +115,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Screen density
-TARGET_SCREEN_DENSITY := 440
+TARGET_SCREEN_DENSITY := 438
 
 # Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)

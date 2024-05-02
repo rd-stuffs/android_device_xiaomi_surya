@@ -1,3 +1,6 @@
+// Copyright (C) 2024 Paranoid Android
+// SPDX-License-Identifier: Apache-2.0
+
 soong_namespace {
     imports: [
         "hardware/xiaomi"
@@ -8,4 +11,18 @@ cc_library_shared {
     name: "libvendor.goodix.hardware.biometrics.fingerprint@2.1",
     shared_libs: ["vendor.goodix.hardware.biometrics.fingerprint@2.1"],
     vendor_available: true
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_dpmQmi_interface",
+    interfaces: [
+        "com.qualcomm.qti.dpm.api@1.0::IdpmQmi"
+    ]
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_DspSerivce_interface",
+    interfaces: [
+        "vendor.qti.hardware.dsp@1.0::IDspService"
+    ]
 }
