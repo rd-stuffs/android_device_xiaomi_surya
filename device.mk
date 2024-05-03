@@ -4,6 +4,9 @@
 # Camera
 $(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
 
+# XiaomiParts
+$(call inherit-product, packages/apps/XiaomiParts/parts.mk)
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
