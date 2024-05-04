@@ -382,7 +382,7 @@ vendor/etc/camera/watermark_font_2300_3199.dat|470c10429888b89966af5eb610b13b843
 vendor/firmware/CAMERA_ICP.elf|22d8b031172e11b6f34f95be243de8fef092d90c
 
 # Camera provider - from V14.0.1.0.SJGMIXM
-vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|4e311e433ed442a2ccfbd69310271df88a284c98
+vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|19df11e9811064792414a510fbba325ab4b41638
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so|67cfc6d7e4ac53908ffb09d13184bb79ff34894f
 
 # Camera sensors - from V14.0.1.0.SJGMIXM
