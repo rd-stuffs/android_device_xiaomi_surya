@@ -213,6 +213,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     libqti-perfd-client
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
+    vendor/qcom/common/vendor/perf/proprietary/vendor/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance
+
 # Platform
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
