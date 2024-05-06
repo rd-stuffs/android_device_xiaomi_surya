@@ -191,7 +191,8 @@ PRODUCT_PACKAGES += \
 
 # Overlays (AOSPA)
 PRODUCT_PACKAGES += \
-    AOSPAFrameworksJ20COverlay
+    AOSPAFrameworksJ20COverlay \
+    AOSPASettingsJ20COverlay
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
