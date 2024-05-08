@@ -7,9 +7,6 @@ $(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Firmware
-$(call inherit-product, vendor/xiaomi/firmware/config.mk)
-
 # Vendor
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
