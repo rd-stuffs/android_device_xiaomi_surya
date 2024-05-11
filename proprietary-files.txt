@@ -778,6 +778,7 @@ vendor/bin/pm-service|1a48e2a015181b351374b99053fb5dee8e2750ee
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Public libraries - from V14.0.1.0.SJGMIXM
+system/etc/public.libraries-xiaomi.txt|a09ea720d0d058074b728c96ccdb1a755426041c
 vendor/etc/public.libraries.txt|4816d7ba3be319db7f0f2d810f548ec8c6f60bfd
 
 # QCV (SOC Helper) - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
