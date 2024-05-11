@@ -126,7 +126,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
 include device/xiaomi/sepolicy/SEPolicy.mk
-include device/xiaomi/surya/sepolicy/surya-sepolicy.mk
+include device/xiaomi/surya/sepolicy/SEPolicy.mk
 TARGET_SEPOLICY_DIR := msmsteppe
 
 # Verified Boot
