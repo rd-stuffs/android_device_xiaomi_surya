@@ -115,3 +115,13 @@ on property:persist.vendor.hvdcp_opti.start=1
 on charger
     chown system system /sys/class/leds/white/brightness
     write /sys/class/leds/white/brightness 255
+
+on property:vendor.camera.watermark.en=1
+    chmod 666 /mnt/vendor/persist/camera/karna_main_space_custom_watermark.png
+    chmod 666 /mnt/vendor/persist/camera/karna_main_space_cinematic_ratio_custom_watermark.png
+    chmod 666 /mnt/vendor/persist/camera/surya_main_space_custom_watermark.png
+    chmod 666 /mnt/vendor/persist/camera/surya_main_space_cinematic_ratio_custom_watermark.png
+    chmod 666 /mnt/vendor/persist/camera/indra_main_space_custom_watermark.png
+    chmod 666 /mnt/vendor/persist/camera/indra_main_space_cinematic_ratio_custom_watermark.png
+    chmod 666 /mnt/vendor/persist/camera/arjuna_main_space_custom_watermark.png
+    chmod 666 /mnt/vendor/persist/camera/arjuna_main_space_cinematic_ratio_custom_watermark.png
