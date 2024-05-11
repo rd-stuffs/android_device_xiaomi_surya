@@ -27,16 +27,12 @@ void load_poco_karna() {
     property_override("ro.product.device", "karna");
     property_override("ro.product.model", "POCO X3");
     property_override("ro.product.name", "karna_in");
-    property_override("ro.product.mod_device", "surya_in_global");
 }
 
 void vendor_load_properties() {
     if (access("/system/bin/recovery", F_OK) != 0) {
-        if (hwname == "karna") {
+        if (hwname == "karna")
             load_poco_karna();
-        } else {
-            property_override("ro.product.mod_device", "surya_global");
-        }
     }
 
     // Set hardware revision

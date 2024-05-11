@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Camera
-$(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
+$(call inherit-product, vendor/miuicamera/config.mk)
 
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -62,6 +62,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
+CAMERA_PACKAGE_NAME := com.android.camera
+
 PRODUCT_PACKAGES += \
     libpiex_shim
 
@@ -84,6 +86,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=1 \
     persist.vendor.camera.perflock.enable=0
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.camera.privapp.list=com.android.camera,co.aospa.sense \
+    vendor.camera.aux.packagelist=com.android.camera,co.aospa.sense
 
 # ContextHub
 PRODUCT_PACKAGES += \
