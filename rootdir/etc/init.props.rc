@@ -6,6 +6,8 @@ on property:ro.boot.hwversion=*
 
 on property:ro.boot.hwname=karna
     setprop bluetooth.device.default_name "POCO X3"
+    setprop ro.product.marketname "POCO X3"
 
 on property:ro.boot.hwname=surya
     setprop bluetooth.device.default_name "POCO X3 NFC"
+    setprop ro.product.marketname "POCO X3 NFC"
