@@ -175,7 +175,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Filesystems
 PRODUCT_PACKAGES += fstab.qcom
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
 PRODUCT_SYSTEM_PROPERTIES += \
     fs_mgr.overlayfs.prefer_cache_backing_storage=true
@@ -239,16 +239,18 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
+    init.mi.usb.sh \
+    init.surya.usb.sh \
+    init.qti.dcvs.sh \
+    init.qti.early_init.sh
+
+PRODUCT_PACKAGES += \
     init.game.rc \
     init.mi_thermald.rc \
     init.surya.usb.rc \
     init.surya.perf.rc \
     init.surya.rc \
-    init.target.rc \
-    init.mi.usb.sh \
-    init.surya.usb.sh \
-    init.qti.dcvs.sh \
-    init.qti.early_init.sh
+    init.target.rc
 
 # IR
 PRODUCT_PACKAGES += \

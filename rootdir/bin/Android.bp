@@ -1,0 +1,27 @@
+// Copyright (C) 2024 Paranoid Android
+// SPDX-License-Identifier: Apache-2.0
+
+sh_binary {
+    name: "init.mi.usb.sh",
+    src: "init.mi.usb.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.surya.usb.sh",
+    src: "init.qcom.usb.sh",
+    filename_from_src: true,
+    vendor: true
+}
+
+sh_binary {
+    name: "init.qti.dcvs.sh",
+    src: "init.qti.dcvs.sh",
+    vendor: true
+}
+
+sh_binary {
+    name: "init.qti.early_init.sh",
+    src: "init.qti.early_init.sh",
+    vendor: true
+}
