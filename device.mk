@@ -362,8 +362,7 @@ PRODUCT_PACKAGES += \
 # Overlays (AOSPA)
 PRODUCT_PACKAGES += \
     AOSPASuryaFrameworks \
-    AOSPASuryaSettings \
-    AOSPASuryaSystemUI
+    AOSPASuryaSettings
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
