@@ -1,6 +1,10 @@
 # Copyright (C) 2024 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
+on property:ro.boot.hwname=*
+    setprop ro.boot.hardware.sku ${ro.boot.hwname}
+    setprop ro.boot.product.hardware.sku ${ro.boot.hwname}
+
 on property:ro.boot.hwversion=*
     setprop ro.boot.hardware.revision ${ro.boot.hwversion}
 
