@@ -124,6 +124,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.renderengine.backend=skiaglthreaded \
     debug.sf.defer_refresh_rate_when_off=1 \
     debug.sf.disable_backpressure=1 \
+    debug.sf.enable_adpf_cpu_hint=true \
     ro.surface_flinger.protected_contents=true \
     ro.vendor.display.sensortype=2 \
     vendor.display.disable_idle_time_hdr=1 \
