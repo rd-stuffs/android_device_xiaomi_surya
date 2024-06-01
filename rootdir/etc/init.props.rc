@@ -1,17 +1,21 @@
 # Copyright (C) 2024 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
-on property:ro.boot.hwname=*
-    setprop ro.boot.hardware.sku ${ro.boot.hwname}
-    setprop ro.boot.product.hardware.sku ${ro.boot.hwname}
-
 on property:ro.boot.hwversion=*
     setprop ro.boot.hardware.revision ${ro.boot.hwversion}
 
+on property:ro.boot.hwname=*
+    setprop ro.boot.product.hardware.sku ${ro.boot.hwname}
+    setprop ro.product.device ${ro.boot.hwname}
+
 on property:ro.boot.hwname=karna
-    setprop bluetooth.device.default_name "POCO X3"
     setprop ro.product.marketname "POCO X3"
+    setprop ro.product.name "karna_in"
 
 on property:ro.boot.hwname=surya
-    setprop bluetooth.device.default_name "POCO X3 NFC"
     setprop ro.product.marketname "POCO X3 NFC"
+    setprop ro.product.name "surya_global"
+
+on property:ro.product.marketname=*
+    setprop bluetooth.device.default_name ${ro.product.marketname}
+    setprop ro.product.model ${ro.product.marketname}
