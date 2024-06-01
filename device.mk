@@ -356,6 +356,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.boot.hardware.sku=surya
+
 # Overlays
 PRODUCT_PACKAGES += \
     KarnaFrameworks \
@@ -364,6 +367,7 @@ PRODUCT_PACKAGES += \
     SuryaCarrierConfig \
     SuryaFrameworks \
     SuryaMiuiCamera \
+    SuryaNFC \
     SuryaSettings \
     SuryaSettingsProvider \
     SuryaSystemUI \
