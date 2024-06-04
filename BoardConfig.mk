@@ -70,6 +70,10 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.init_fatal_reboot_target=recovery
 
+# Libinit
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_karna
+TARGET_RECOVERY_DEVICE_MODULES := libinit_karna
+
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
