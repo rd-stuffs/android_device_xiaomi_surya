@@ -364,6 +364,7 @@ PRODUCT_PACKAGES += \
     KarnaFrameworks \
     KarnaSettingsProvider \
     KarnaWifi \
+    KarnaWifiMainline \
     SuryaCarrierConfig \
     SuryaFrameworks \
     SuryaMiuiCamera \
@@ -371,7 +372,8 @@ PRODUCT_PACKAGES += \
     SuryaSettings \
     SuryaSettingsProvider \
     SuryaSystemUI \
-    SuryaWifi
+    SuryaWifi \
+    SuryaWifiMainline
 
 # Overlays (AOSPA)
 PRODUCT_PACKAGES += \
