@@ -95,8 +95,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=1
 
 PRODUCT_SYSTEM_PROPERTIES += \
-    persist.vendor.camera.privapp.list=com.android.camera,co.aospa.sense \
-    vendor.camera.aux.packagelist=com.android.camera,co.aospa.sense
+    persist.vendor.camera.privapp.list=com.android.camera,com.gcamlinkon.shamim844,co.aospa.sense \
+    vendor.camera.aux.packagelist=com.android.camera,com.gcamlinkon.shamim844,co.aospa.sense
 
 # ContextHub
 PRODUCT_PACKAGES += \
