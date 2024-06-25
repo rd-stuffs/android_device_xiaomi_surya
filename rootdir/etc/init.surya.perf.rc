@@ -63,8 +63,8 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/background/cpus 4-5
     write /dev/cpuset/system-background/cpus 2-5
     write /dev/cpuset/restricted/cpus 2-5
-    write /dev/cpuset/audio-app/cpus 1-2
-    write /dev/cpuset/camera-daemon/cpus 1-2
+    write /dev/cpuset/audio-app/cpus 0-3,6-7
+    write /dev/cpuset/camera-daemon/cpus 0-3,6-7
 
     # Setup final blkio value for group_idle is us
     write /dev/blkio/blkio.group_idle 2000
@@ -102,6 +102,8 @@ on property:vendor.post_boot.parsed=1
     # Setup default schedtune values for foreground/top-app
     write /dev/stune/schedtune.boost 0
     write /dev/stune/schedtune.prefer_idle 0
+    write /dev/stune/audio-app/schedtune.prefer_idle 1
+    write /dev/stune/camera-daemon/schedtune.prefer_idle 1
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/top-app/schedtune.prefer_idle 1
     write /dev/stune/top-app/schedtune.boost 1
