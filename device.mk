@@ -224,6 +224,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
+# Health
+TARGET_USE_HIDL_QTI_HEALTH := true
+
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport.vendor \
