@@ -16,9 +16,6 @@ $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 # Vibrator
 $(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
 
-# ViPER4AndroidFX
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
-
 # XiaomiParts
 $(call inherit-product, packages/apps/XiaomiParts/parts.mk)
 
