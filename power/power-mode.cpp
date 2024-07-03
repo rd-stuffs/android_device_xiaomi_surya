@@ -5,7 +5,7 @@
 #include <android-base/file.h>
 #include "power-common.h"
 
-#define DOUBLE_TAP_NODE "/proc/tp_gesture"
+#define DOUBLE_TAP_NODE "/sys/touchpanel/double_tap"
 
 namespace aidl {
 namespace android {
