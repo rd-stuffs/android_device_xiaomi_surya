@@ -1,12 +1,4 @@
 <compatibility-matrix version="1.0" type="framework">
-<hal format="hidl" optional="true">
-    <name>android.hardware.biometrics.fingerprint</name>
-    <version>2.0-3</version>
-    <interface>
-        <name>IBiometricsFingerprint</name>
-        <instance>default</instance>
-    </interface>
-</hal>
 <hal format="aidl" optional="true">
     <name>android.hardware.cas</name>
     <interface>
@@ -86,18 +78,6 @@
     <version>2</version>
     <interface>
         <name>ISupplicant</name>
-        <instance>default</instance>
-    </interface>
-</hal>
-<hal format="hidl" optional="true">
-    <name>vendor.goodix.hardware.biometrics.fingerprint</name>
-    <version>2.0-1</version>
-    <interface>
-        <name>IGoodixFingerprintDaemon</name>
-        <instance>default</instance>
-    </interface>
-    <interface>
-        <name>IGoodixFingerprintDaemonExt</name>
         <instance>default</instance>
     </interface>
 </hal>
