@@ -52,7 +52,7 @@ on late-init
 on boot
     # Set thermal mode to evaluation
     chown system system /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 10
+    write /sys/class/thermal/thermal_message/sconfig 0
 
 on property:vendor.post_boot.parsed=1
     # Disable native stats collection service
