@@ -16,8 +16,8 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
         "1804800",
-        "1324800",
-        "768000"
+        "1612800",
+        "576000"
       ],
       "ResetOnInit": true
     },
@@ -38,7 +38,7 @@
       "Values": [
         "2304000",
         "1324800",
-        "806400"
+        "652800"
       ],
       "ResetOnInit": true
     },
@@ -66,7 +66,7 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
       "Values": [
         "10000",
-        "63"
+        "58"
       ],
       "ResetOnInit": true
     },
@@ -211,7 +211,7 @@
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1324800"
+      "Value": "1612800"
     },
     {
       "PowerHint": "INTERACTION",
@@ -232,6 +232,24 @@
       "Value": "5931"
     },
     {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBWHistMemory",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBWHystLength",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBWHystTriggerCount",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 3000,
@@ -242,6 +260,12 @@
       "Node": "CPUBigClusterMinFreq",
       "Duration": 3000,
       "Value": "2304000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUMinFreq",
+      "Duration": 3000,
+      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
