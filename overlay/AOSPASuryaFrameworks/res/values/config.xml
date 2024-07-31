@@ -32,6 +32,9 @@
     <!-- Whether to show WiFi/Hotspot standard -->
     <bool name="config_show_network_standard">true</bool>
 
+    <!-- Whether device supports QTI Boost Framework -->
+    <bool name="config_supportsBoostFramework">false</bool>
+
     <!-- Array of:
         - Path to fast charging status file
         - Delimiter ";"

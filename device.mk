@@ -41,6 +41,7 @@ PRODUCT_ODM_PROPERTIES += \
     persist.vendor.audio.fluence.voicecomm=true \
     persist.vendor.audio.fluence.voicerec=false \
     ro.vendor.audio.sdk.fluencetype=none \
+    vendor.audio.feature.kpi_optimize.enable=false \
     vendor.audio.offload.buffer.size.kb=256
 
 PRODUCT_ODM_PROPERTIES += \
@@ -89,7 +90,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_VENDOR_PROPERTIES += \
-    camera.disable_zsl_mode=1
+    camera.disable_zsl_mode=1 \
+    persist.vendor.camera.perflock.enable=0
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.camera.privapp.list=com.android.camera,com.gcamlinkon.shamim844,co.aospa.sense \
@@ -331,6 +333,8 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/xiaomi
 
 # Netflix
@@ -391,12 +395,21 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Perf
+PRODUCT_PACKAGES += libqti-perfd-client
+PRODUCT_VENDOR_PROPERTIES += ro.vendor.extension_library=libqti-perfd-client.so
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml
+    $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
+    vendor/qcom/common/vendor/perf/proprietary/vendor/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance
 
 # Platform
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
+
+# Power
+TARGET_PROVIDES_POWERHAL := true
+PRODUCT_PACKAGES += android.hardware.power-service.xiaomi-libperfmgr
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/perf/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
@@ -410,7 +423,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     init \
     media \
     overlay \
-    perf \
     telephony \
     usb \
     wfd \
