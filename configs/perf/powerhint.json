@@ -116,20 +116,22 @@
       "ResetOnInit": true
     },
     {
-      "Name": "CPUBWGovernor",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/governor",
+      "Name": "CPUBWMinFreq",
+      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/min_freq",
       "Values": [
-        "performance",
-        "bw_hwmon"
+        "14236",
+        "9155",
+        "2288"
       ],
       "ResetOnInit": true
     },
     {
-      "Name": "LLCCBWGovernor",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/governor",
+      "Name": "LLCCBWMinFreq",
+      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/min_freq",
       "Values": [
-        "performance",
-        "bw_hwmon"
+        "6881",
+        "5931",
+        "762"
       ],
       "ResetOnInit": true
     },
@@ -218,6 +220,18 @@
       "Value": "1324800"
     },
     {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBWMinFreq",
+      "Duration": 0,
+      "Value": "9155"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "LLCCBWMinFreq",
+      "Duration": 0,
+      "Value": "5931"
+    },
+    {
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 3000,
@@ -267,15 +281,15 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "CPUBWGovernor",
+      "Node": "CPUBWMinFreq",
       "Duration": 3000,
-      "Value": "performance"
+      "Value": "14236"
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "LLCCBWGovernor",
+      "Node": "LLCCBWMinFreq",
       "Duration": 3000,
-      "Value": "performance"
+      "Value": "6881"
     },
     {
       "PowerHint": "LAUNCH",
