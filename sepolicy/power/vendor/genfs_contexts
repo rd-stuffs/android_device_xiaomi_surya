@@ -7,3 +7,6 @@ genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_timeout_ms      
 
 # SchedBoost
 genfscon proc /sys/kernel/sched_boost u:object_r:proc_sched_boost:s0
+
+# EAS
+genfscon proc /sys/kernel/sched_energy_aware u:object_r:proc_sched_energy_aware:s0

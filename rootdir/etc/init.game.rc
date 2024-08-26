@@ -15,6 +15,7 @@ on property:sys.perf_profile=1
     write /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/governor performance
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
     write /sys/class/thermal/thermal_message/sconfig 9
+    write /proc/sys/kernel/sched_energy_aware 0
 
 on property:sys.perf_profile=0
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 0
@@ -30,6 +31,7 @@ on property:sys.perf_profile=0
     write /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/governor bw_hwmon
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
     write /sys/class/thermal/thermal_message/sconfig 0
+    write /proc/sys/kernel/sched_energy_aware 1
 
 on property:vendor.post_boot.parsed=1
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 0

@@ -102,6 +102,15 @@
       "ResetOnInit": true
     },
     {
+      "Name": "EnergyAware",
+      "Path": "/proc/sys/kernel/sched_energy_aware",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "ForegroundCpuset",
       "Path": "/dev/cpuset/foreground/cpus",
       "Values": [
@@ -241,6 +250,12 @@
       "Node": "L3BigClusterMinFreq",
       "Duration": 3000,
       "Value": "1459200000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "EnergyAware",
+      "Duration": 3000,
+      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
