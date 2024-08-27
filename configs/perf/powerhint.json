@@ -131,6 +131,15 @@
       "ResetOnInit": true
     },
     {
+      "Name": "TASchedtuneBoost",
+      "Path": "/dev/stune/top-app/schedtune.boost",
+      "Values": [
+        "50",
+        "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -184,6 +193,12 @@
       "Node": "SchedBoost",
       "Duration": 0,
       "Value": "2"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "TASchedtuneBoost",
+      "Duration": 0,
+      "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
@@ -268,6 +283,12 @@
       "Node": "SchedBoost",
       "Duration": 3000,
       "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TASchedtuneBoost",
+      "Duration": 3000,
+      "Value": "50"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
