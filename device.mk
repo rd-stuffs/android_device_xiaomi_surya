@@ -7,9 +7,6 @@ $(call inherit-product, vendor/miuicamera/config.mk)
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Project ID Quota
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 # Vendor
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
@@ -49,10 +46,6 @@ PRODUCT_ODM_PROPERTIES += \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_default=5 \
     ro.config.vc_call_vol_steps=10
-
-# APK Verity
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.apk_verity.mode=2
 
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
@@ -110,10 +103,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.crypto.dm_default_key.options_format.version=2 \
-    ro.crypto.volume.metadata.method=dm-default-key \
-    ro.crypto.volume.filenames_mode=aes-256-cts \
-    ro.crypto.volume.options=::v2
+    ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Cutout
 PRODUCT_PACKAGES += \
@@ -190,14 +180,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Filesystems
 PRODUCT_PACKAGES += fstab.qcom
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-
-PRODUCT_PACKAGES += \
-    e2fsck_ramdisk \
-    tune2fs_ramdisk \
-    resize2fs_ramdisk
-
-PRODUCT_SYSTEM_PROPERTIES += \
-    fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
 # Fingerprint
 PRODUCT_PACKAGES += \
