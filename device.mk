@@ -461,11 +461,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# Task Profiles
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/profiles/task_profiles_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
-    $(LOCAL_PATH)/configs/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json
-
 # Thermal
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
