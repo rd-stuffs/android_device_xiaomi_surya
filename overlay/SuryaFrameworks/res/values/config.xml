@@ -326,18 +326,6 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
-    <!-- Flag indicating whether the surface flinger has limited
-         alpha compositing functionality in hardware.  If set, the window
-         manager will disable alpha trasformation in animations where not
-         strictly needed. -->
-    <bool name="config_sf_limitedAlpha">true</bool>
-
-    <!-- The max scale for the wallpaper when it's zoomed in -->
-    <item name="config_wallpaperMaxScale" format="float" type="dimen">1</item>
-
-    <!-- Whether the new Auto Selection Network UI should be shown -->
-    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
-
     <!-- Safe headphone volume index. When music stream volume is below this index
          the SPL on headphone output is compliant to EN 60950 requirements for portable music
          players. -->
@@ -365,12 +353,5 @@
         <item>12</item>
         <item>7</item>
     </integer-array>
-
-    <!-- List of comma separated package names for which we the system will not show crash like
-         tts, etc. dialogs. -->
-    <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
-
-    <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
-    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.6</item>
 
 </resources>
