@@ -5,7 +5,7 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
         "1804800",
-        "1324800",
+        "1612800",
         "768000"
       ],
       "ResetOnInit": true
@@ -197,7 +197,7 @@
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1324800"
+      "Value": "1612800"
     },
     {
       "PowerHint": "INTERACTION",
