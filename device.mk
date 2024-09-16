@@ -444,6 +444,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Telephony
+PRODUCT_PACKAGES += \
+    Stk
+
 # Thermal
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
