@@ -123,6 +123,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     debug.renderengine.backend=skiaglthreaded \
     debug.sf.defer_refresh_rate_when_off=1 \
+    debug.sf.enable_gl_backpressure=0 \
     debug.sf.disable_backpressure=1 \
     ro.surface_flinger.protected_contents=true \
     ro.vendor.display.sensortype=2 \
