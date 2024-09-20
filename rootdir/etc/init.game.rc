@@ -1,6 +1,9 @@
 # Copyright (C) 2024 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 
+on property:vendor.post_boot.parsed=1
+    setprop sys.perf_profile 0
+
 on property:sys.perf_profile=1
     write /dev/stune/top-app/schedtune.boost 10
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
