@@ -49,8 +49,8 @@ on property:vendor.post_boot.parsed=1
     write /sys/module/cpu_boost/parameters/input_boost_ms 200
 
     # Configure scheduler parameters
-    write /proc/sys/kernel/sched_upmigrate 95
-    write /proc/sys/kernel/sched_downmigrate 85
+    write /proc/sys/kernel/sched_upmigrate 73
+    write /proc/sys/kernel/sched_downmigrate 37
     write /proc/sys/kernel/sched_child_runs_first 1
 
     # Setup default schedtune values for foreground/top-app
