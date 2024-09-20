@@ -45,7 +45,8 @@ ODM_MANIFEST_SKUS += surya
 ODM_MANIFEST_SURYA_FILES := $(DEVICE_PATH)/configs/vintf/manifest-nfc.xml
 
 # Kernel
-KERNEL_DEFCONFIG := vendor/surya-perf_defconfig
+KERNEL_DEFCONFIG := surya_defconfig
+KERNEL_FULL_LLVM := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x01000000
