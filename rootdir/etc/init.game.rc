@@ -32,4 +32,4 @@ on property:sys.perf_profile=0
     write /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq 979200
     write /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/governor bw_hwmon
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    write /sys/class/thermal/thermal_message/sconfig 0
+    write /sys/class/thermal/thermal_message/sconfig 10
