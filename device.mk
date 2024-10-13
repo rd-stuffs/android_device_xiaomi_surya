@@ -37,8 +37,7 @@ PRODUCT_ODM_PROPERTIES += \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicecomm=true \
     persist.vendor.audio.fluence.voicerec=false \
-    ro.vendor.audio.sdk.fluencetype=none \
-    vendor.audio.offload.buffer.size.kb=256
+    ro.vendor.audio.sdk.fluencetype=none
 
 PRODUCT_ODM_PROPERTIES += \
     ro.config.media_vol_default=8 \
