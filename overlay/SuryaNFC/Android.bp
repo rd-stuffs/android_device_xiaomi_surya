@@ -3,5 +3,5 @@
 
 runtime_resource_overlay {
     name: "SuryaNFC",
-    device_specific: true
+    vendor: true
 }
