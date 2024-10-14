@@ -11,5 +11,6 @@
     <overlay
         android:isStatic="true"
         android:priority="850"
+        android:targetName="NfcCustomization"
         android:targetPackage="com.android.nfc" />
 </manifest>
