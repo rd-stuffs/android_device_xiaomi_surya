@@ -359,6 +359,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    aptxalsOverlay \
     KarnaFrameworks \
     KarnaSettingsProvider \
     KarnaWifi \
