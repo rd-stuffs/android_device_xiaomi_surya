@@ -61,7 +61,6 @@ function lib_to_package_fixup_vendor_variants() {
             vendor.qti.ims.* | \
             vendor.qti.latency* | \
             vendor.xiaomi.hardware.misys* | \
-            vendor.qti.hardware.camera.device* | \
             vendor.nxp.*)
             echo "$1_vendor"
             ;;
