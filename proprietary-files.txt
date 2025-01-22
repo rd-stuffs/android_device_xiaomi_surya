@@ -384,6 +384,7 @@ vendor/firmware/CAMERA_ICP.elf|22d8b031172e11b6f34f95be243de8fef092d90c
 # Camera provider - from V14.0.1.0.SJGMIXM
 vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|19df11e9811064792414a510fbba325ab4b41638
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so|67cfc6d7e4ac53908ffb09d13184bb79ff34894f
+vendor/lib64/vendor.qti.hardware.camera.device@3.5.so|f5f41758fc143d2d6e98222a436da456d86a1eed
 
 # Camera sensors - from V14.0.1.0.SJGMIXM
 vendor/lib64/camera/com.qti.sensor.ofilm_hi259.so|2120902e1909ebd2e39c27c9ddde27bf2986c34a
