@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Whether hardware video encoding is supported. default: true -->
+    <bool name="config_HardwareVideoEncode" translatable="false">false</bool>
+
+    <!-- Whether to default to HQ mode. default: false -->
+    <bool name="config_HighQualityVideoDefault" translatable="false">true</bool>
+
+</resources>
