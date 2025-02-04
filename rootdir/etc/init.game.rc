@@ -19,7 +19,7 @@ on property:sys.perf_profile=1
     write /sys/class/thermal/thermal_message/sconfig 9
 
 on property:sys.perf_profile=0
-    write /dev/cpuctl/top-app/cpu.uclamp.min 1
+    write /dev/cpuctl/top-app/cpu.uclamp.min 10
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 0
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 0
     write /sys/class/kgsl/kgsl-3d0/force_no_nap 0

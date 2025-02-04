@@ -62,16 +62,16 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/kernel/sched_tunable_scaling 1
 
     # Setup default UClamp values for critical groups
+    write /dev/cpuctl/background/cpu.uclamp.min 20
+    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 1
     write /dev/cpuctl/camera-daemon/cpu.uclamp.min 50
     write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/foreground/cpu.uclamp.min 20
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
     write /dev/cpuctl/nnapi-hal/cpu.uclamp.min 75
     write /dev/cpuctl/nnapi-hal/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/top-app/cpu.uclamp.min 1
+    write /dev/cpuctl/top-app/cpu.uclamp.min 10
     write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
-
-    # Setup default UClamp values for other latency-sensitive groups
-    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 1
 
     # Report max frequency to unity tasks
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
