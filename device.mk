@@ -7,9 +7,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Vendor
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
-# Vibrator
-$(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
-
 # XiaomiParts
 $(call inherit-product, packages/apps/XiaomiParts/parts.mk)
 
@@ -424,6 +421,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     perf \
     telephony \
     usb \
+    vibrator \
     wfd \
     wlan
 
@@ -497,6 +495,10 @@ PRODUCT_ODM_PROPERTIES += \
 # Userspace fastboot
 PRODUCT_PACKAGES += \
     fastbootd
+
+# Vibrator
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # WiFi
 PRODUCT_COPY_FILES += \
