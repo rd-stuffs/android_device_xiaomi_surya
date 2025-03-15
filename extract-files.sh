@@ -95,6 +95,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
+        vendor/lib64/ese_spi_nxp.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
         *)
             return 1
             ;;
