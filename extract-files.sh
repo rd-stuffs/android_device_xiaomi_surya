@@ -55,6 +55,15 @@ if [ -z "${SRC}" ]; then
 fi
 
 function blob_fixup() {
+    # Patch all binaries for libstagefright_foundation
+    shopt -s globstar
+    case "${1}" in
+        vendor/bin/** | vendor/**/*.so)
+            readelf -d "$2" 2>/dev/null | grep -q 'libstagefright_foundation.so' && \
+                "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            ;;
+    esac
+
     case "${1}" in
         vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc)
             [ "$2" = "" ] && return 0
