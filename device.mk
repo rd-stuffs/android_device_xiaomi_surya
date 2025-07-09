@@ -169,7 +169,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.early.sf.duration=16000000 \
     debug.sf.early.app.duration=16500000 \
     debug.sf.earlyGl.sf.duration=13500000 \
-    debug.sf.earlyGl.app.duration=21000000
+    debug.sf.earlyGl.app.duration=21000000 \
+    debug.sf.hwc.min.duration=8400000
 
 PRODUCT_ODM_PROPERTIES += \
     ro.surface_flinger.has_wide_color_display=false \
