@@ -164,12 +164,12 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.use_phase_offsets_as_durations=1 \
-    debug.sf.late.sf.duration=10500000 \
-    debug.sf.late.app.duration=20500000 \
-    debug.sf.early.sf.duration=16000000 \
-    debug.sf.early.app.duration=16500000 \
-    debug.sf.earlyGl.sf.duration=13500000 \
-    debug.sf.earlyGl.app.duration=21000000 \
+    debug.sf.late.sf.duration=14600000 \
+    debug.sf.late.app.duration=15600000 \
+    debug.sf.early.sf.duration=14600000 \
+    debug.sf.early.app.duration=15600000 \
+    debug.sf.earlyGl.sf.duration=14600000 \
+    debug.sf.earlyGl.app.duration=15600000 \
     debug.sf.hwc.min.duration=8400000
 
 PRODUCT_ODM_PROPERTIES += \
