@@ -14,4 +14,7 @@
     <!-- Integer threshold, do not connect to APs with RSSI lower than the entry threshold -->
     <integer translatable="false" name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-85</integer>
 
+    <!-- Indicate the driver support NL80211_REG_CHANGED event. -->
+    <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">false</bool>
+
 </resources>
