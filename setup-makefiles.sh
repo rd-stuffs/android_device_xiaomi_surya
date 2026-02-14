@@ -32,7 +32,7 @@ function vendor_imports() {
         "vendor/qcom/common/vendor/display/4.14",
         "vendor/qcom/common/vendor/display",
         "vendor/qcom/common/vendor/gps-legacy",
-        "vendor/qcom/common/vendor/media-legacy",
+        "vendor/qcom/common/vendor/media/legacy",
 EOF
 }
 
