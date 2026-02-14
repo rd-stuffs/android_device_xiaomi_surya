@@ -135,7 +135,6 @@ PRODUCT_PACKAGES += \
     disable_configstore
 
 PRODUCT_VENDOR_PROPERTIES += \
-    debug.graphics.game_default_frame_rate.disabled=true \
     debug.renderengine.backend=skiaglthreaded \
     debug.sf.defer_refresh_rate_when_off=1 \
     debug.sf.enable_gl_backpressure=0 \
