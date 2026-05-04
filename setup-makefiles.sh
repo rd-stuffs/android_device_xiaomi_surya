@@ -28,7 +28,7 @@ function vendor_imports() {
     cat <<EOF >>"$1"
         "hardware/xiaomi",
         "vendor/qcom/common/system/display",
-        "vendor/qcom/common/vendor/adreno-r",
+        "vendor/qcom/common/vendor/adreno/r",
         "vendor/qcom/common/vendor/display/4.14",
         "vendor/qcom/common/vendor/display",
         "vendor/qcom/common/vendor/gps-legacy",
