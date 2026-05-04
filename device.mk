@@ -8,7 +8,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
 # XiaomiParts
-$(call inherit-product, packages/apps/XiaomiParts/parts.mk)
+#$(call inherit-product, packages/apps/XiaomiParts/parts.mk)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
