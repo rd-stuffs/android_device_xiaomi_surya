@@ -385,6 +385,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.boot.hardware.sku=surya
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.nfc_cfg.config_file_name=libnfc-nci.conf
+
 # Overlays
 PRODUCT_PACKAGES += \
     aptxalsOverlay \
