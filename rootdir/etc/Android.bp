@@ -29,15 +29,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.surya.usb.rc",
-    src: "init.qcom.usb.rc",
-    filename_from_src: true,
-    overrides: ["init.qcom.usb.rc"],
-    sub_dir: "init/hw",
-    vendor: true
-}
-
-prebuilt_etc {
     name: "init.surya.perf.rc",
     src: "init.surya.perf.rc",
     sub_dir: "init",

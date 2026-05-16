@@ -256,7 +256,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
-    init.mi.usb.sh \
     init.qti.dcvs.sh \
     init.qti.early_init.sh
 
@@ -264,7 +263,6 @@ PRODUCT_PACKAGES += \
     init.game.rc \
     init.mi_thermald.rc \
     init.props.rc \
-    init.surya.usb.rc \
     init.surya.perf.rc \
     init.surya.rc \
     init.target.rc
