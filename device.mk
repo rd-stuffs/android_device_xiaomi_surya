@@ -58,6 +58,8 @@ PRODUCT_ODM_PROPERTIES += \
     ro.config.vc_call_vol_default=5 \
     ro.config.vc_call_vol_steps=10
 
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.bluetooth.modem_nv_support=true \
