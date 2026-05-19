@@ -363,6 +363,7 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
+    NfcServices \
     Tag \
     android.hardware.nfc@1.2.vendor \
     com.android.nfc_extras \
