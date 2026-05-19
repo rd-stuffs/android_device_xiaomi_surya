@@ -34,9 +34,6 @@ TARGET_BOOTLOADER_BOARD_NAME := sm6150
 # Build
 BUILD_BROKEN_DUP_RULES := true
 
-# Camera
-TARGET_USES_YCRCB_CAMERA_ENCODE := true
-
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
