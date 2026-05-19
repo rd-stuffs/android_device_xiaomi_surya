@@ -282,7 +282,7 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 PRODUCT_ENABLE_UFFD_GC := true
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.bpf.kver_override=5.4.299
+    ro.bpf.kver_override=5.15.202
 
 # Keylayout
 PRODUCT_COPY_FILES += \
