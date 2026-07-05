@@ -2,4 +2,4 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Charger
-/sys/class/power_supply/battery input_suspend   0660    system  system
+/sys/class/power_supply/battery charging_bypass   0660    system  system
